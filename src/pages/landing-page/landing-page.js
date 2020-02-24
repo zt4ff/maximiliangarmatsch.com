@@ -42,8 +42,13 @@ const Box = styled.div`
     @media ${device.tablet} {
         flex-direction: row;
         align-items: center;
+        width: 85%;
+        margin-left: 1rem;
+    }
+    @media ${device.laptop} {
         width: 70%;
         margin-left: 5rem;
+        margin-top: 7rem;
     }
 `;
 const TextWelcome = styled.p`
@@ -51,7 +56,7 @@ const TextWelcome = styled.p`
     line-height: 1.5rem;
     text-align: justify;
 `;
-const TextWelcomeEmail = styled.div`
+const TextWelcomeEmail = styled.span`
     color: #ffffff;
 `;
 

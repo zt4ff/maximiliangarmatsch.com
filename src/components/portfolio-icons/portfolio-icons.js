@@ -21,7 +21,13 @@ const Box = styled.div`
     display: flex;
     flex-direction: row;
     @media ${device.tablet} {
+        height: 100%;
         flex-direction: column;
+        position: relative;
+        top: 3rem;
+    }
+    @media ${device.laptop} {
+        top: 9rem;
     }
 `;
 

@@ -33,23 +33,12 @@ export default function App() {
 }
 
 const MainDiv = styled.div`
-    margin: 3rem 4rem;
+    margin: 3rem auto;
+    max-width: 1290px;
+    padding: 0 4rem;
 `;
 
 const Box = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    ${props => {
-        if (props.path === '/') {
-            return 'margin-top: 2rem;';
-        }
-    }}
-    @media ${device.tablet} {
-        ${props => {
-            if (props.path === '/') {
-                return 'margin-top: 10rem;';
-            }
-        }}
-    }
 `;

@@ -28,14 +28,14 @@
     "lint:fix": "eslint src --ext .js,.jsx --fix"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": [
+    "*.{js, jsx}": [
       "npm run lint:fix"
     ]
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint"
     }
   },
   "browserslist": {

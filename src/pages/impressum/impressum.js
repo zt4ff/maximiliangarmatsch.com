@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../../global/style/device';
 
 function Impressum() {
     return (
@@ -65,11 +66,19 @@ function Impressum() {
     );
 }
 const Box = styled.div`
-    max-width: 80%;
+    max-width: 100%;
+    line-height: 1.1rem;
+    @media ${device.tablet} {
+        max-width: 80%;
+    }
 `;
 const TextAdress = styled.p`
-    max-width: 300px;
+    max-width: 80%;
     color: #ffffff;
+    margin-bottom: 1.5rem;
+    @media ${device.tablet} {
+        max-width: 300px;
+    }
 `;
 const PrivacyPolicy = styled.div`
     color: #0de99a;

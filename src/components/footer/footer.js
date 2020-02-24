@@ -1,56 +1,74 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Media from 'react-media';
 import { device } from '../../global/style/device';
 import PortfolioIcons from '../portfolio-icons/portfolio-icons';
+import BackToHome from '../back-to-home/back-to-home';
 
 export default function Footer() {
+    let location = useLocation();
+
     return (
         <Box>
             <footer>
-                <nav>
-                    <Link to="/impressum">Impressum</Link>
+                <Navigation>
+                    {location.pathname === '/' && (
+                        <Link to="/impressum">Impressum</Link>
+                    )}
                     <Media queries={{ tablet: device.tablet }}>
-                        {matches => !matches.tablet && <PortfolioIcons />}
+                        {matches =>
+                            !matches.tablet && (
+                                <>
+                                    {location.pathname !== '/' && (
+                                        <BackToHome
+                                            style={BackToHomeStyle}
+                                            arrowStyle={BackToHomeArrowStyle}
+                                        />
+                                    )}
+                                    <PortfolioIcons />
+                                </>
+                            )
+                        }
                     </Media>
-                </nav>
+                </Navigation>
             </footer>
         </Box>
     );
 }
 
 const Box = styled.div`
-    & footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background: #191919;
-    }
-    & nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #191919;
+    @media ${device.tablet} {
         display: flex;
-        justify-content: space-between;
-        padding: 5px 35px;
-        align-items: center;
+        justify-content: flex-end;
+        background: transparent;
+        position: initial;
+        margin-top: 7rem;
     }
-    & nav ul li {
-        display: inline-block;
-    }
-    & footer a {
+`;
+
+const Navigation = styled.nav`
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 35px;
+    align-items: center;
+    a {
         color: #ffffff;
         text-decoration: none;
     }
     @media ${device.tablet} {
-        footer {
-            display: flex;
-            justify-content: flex-end;
-            background: transparent;
-            position: initial;
-            margin-top: 7rem;
-        }
-        nav {
-            padding: 0;
-        }
+        padding: 0;
     }
 `;
+const BackToHomeStyle = {
+    fontSize: '1rem',
+    fontWeight: '300',
+};
+const BackToHomeArrowStyle = {
+    marginRight: '3px',
+};
