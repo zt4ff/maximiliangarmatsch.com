@@ -1,25 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import { device } from '../../global/style/device';
+import MainTemplate from '../../templates/main-template';
+import { device } from '../../config/device';
 import image from './Max.png';
 function LandingPage() {
     return (
-        <Box>
-            <ImageMaximilian src={image} alt="Maximilian Garmatsch" />
-            <TextWelcome>
-                I am a Senior Web Engineer based in Berlin, Germany. My team and
-                I develop, design, test and deploy web and mobile applications
-                for small and medium businesses.
-                <br />
-                <br />
-                For future collaboration contact me at:
-                <br />
-                <br />
-                <TextWelcomeEmail>
-                    mail@maximiliangarmatsch.com
-                </TextWelcomeEmail>
-            </TextWelcome>
-        </Box>
+        <MainTemplate>
+            <Box>
+                <ImageMaximilian src={image} alt="Maximilian Garmatsch" />
+                <TextWelcome>
+                    I am a Senior Web Engineer based in Berlin, Germany. My team
+                    and I develop, design, test and deploy web and mobile
+                    applications for small and medium businesses.
+                    <br />
+                    <br />
+                    For future collaboration contact me at:
+                    <br />
+                    <br />
+                    <TextWelcomeEmail>
+                        mail@maximiliangarmatsch.com
+                    </TextWelcomeEmail>
+                </TextWelcome>
+            </Box>
+        </MainTemplate>
     );
 }
 

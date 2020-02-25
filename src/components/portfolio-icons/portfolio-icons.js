@@ -1,22 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { device } from '../../global/style/device';
+import { device } from '../../config/device';
+import GitHub from './GitHub.png';
+import LinkedIn from './LinkedIn.png';
 
 function PortfolioIcons() {
     return (
         <Box>
             <Link href="https://github.com/maximiliangarmatsch">
-                <FontAwesomeIcon icon={faGithub} />
+                <Icon src={GitHub} alt="GitHub" />
             </Link>
             <Link href="https://www.linkedin.com/in/maximilian-garmatsch/">
-                <FontAwesomeIcon icon={faLinkedin} />
+                <Icon src={LinkedIn} alt="LinkedIn" />
             </Link>
         </Box>
     );
 }
-
+const Icon = styled.img`
+    width: 30px;
+    height: 30px;
+    @media ${device.tablet} {
+        width: 40px;
+        height: 40px;
+    }
+`;
 const Box = styled.div`
     display: flex;
     flex-direction: row;

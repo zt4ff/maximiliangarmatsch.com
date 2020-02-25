@@ -1,37 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
-import Media from 'react-media';
-import Header from '../components/header/header';
-import Footer from '../components/footer/footer';
-import PortfolioIcons from '../components/portfolio-icons/portfolio-icons';
-import { device } from '../global/style/device';
-import Router from './router';
+import { ThemeProvider } from 'styled-components';
+import { Route, Switch } from 'react-router-dom';
+import ErrorBoundary from '../helpers/error-boundary';
+import LocaleProvider from '../helpers/locale-provider';
+import LandingPage from '../pages/landing-page/landing-page';
+import Impressum from '../pages/impressum/impressum';
+import theme from '../config/theme';
 
 export default function App() {
     return (
-        <Box>
-            <Header />
-            <Main>
-                <Router />
-                <Media query={device.tablet}>
-                    <PortfolioIcons />
-                </Media>
-            </Main>
-            <Footer />
-        </Box>
+        <ErrorBoundary>
+            <ThemeProvider theme={theme}>
+                <LocaleProvider>
+                    <Switch>
+                        <Route exact path="/">
+                            <LandingPage />
+                        </Route>
+                        <Route path="/impressum">
+                            <Impressum />
+                        </Route>
+                    </Switch>
+                </LocaleProvider>
+            </ThemeProvider>
+        </ErrorBoundary>
     );
 }
-
-const Box = styled.div`
-    margin: 3rem auto;
-    max-width: 1290px;
-    padding: 5px 35px;
-    @media ${device.tablet} {
-        padding: 0 4rem;
-    }
-`;
-
-const Main = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;

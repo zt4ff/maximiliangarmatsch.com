@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import Media from 'react-media';
-import { device } from '../../global/style/device';
+import { device } from '../../config/device';
 import BackToHome from '../back-to-home/back-to-home';
 
 function Header() {
