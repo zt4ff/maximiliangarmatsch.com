@@ -66,11 +66,7 @@ function Impressum() {
     );
 }
 const Box = styled.div`
-    max-width: 100%;
     line-height: 1.1rem;
-    @media ${device.tablet} {
-        max-width: 80%;
-    }
 `;
 const TextAdress = styled.p`
     max-width: 80%;

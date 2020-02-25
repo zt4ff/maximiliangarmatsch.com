@@ -42,7 +42,6 @@ const Box = styled.div`
     @media ${device.tablet} {
         flex-direction: row;
         align-items: center;
-        width: 85%;
         margin-left: 1rem;
     }
     @media ${device.laptop} {
