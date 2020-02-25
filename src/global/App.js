@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import ErrorBoundary from '../helpers/error-boundary';
 import LocaleProvider from '../helpers/locale-provider';
-import LandingPage from '../pages/landing-page/landing-page';
+import Landingpage from '../pages/Landingpage/Landingpage';
 import Impressum from '../pages/impressum/impressum';
 import theme from '../config/theme';
 
@@ -14,7 +14,7 @@ export default function App() {
                 <LocaleProvider>
                     <Switch>
                         <Route exact path="/">
-                            <LandingPage />
+                            <Landingpage />
                         </Route>
                         <Route path="/impressum">
                             <Impressum />

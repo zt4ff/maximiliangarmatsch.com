@@ -1,21 +1,22 @@
 import React from 'react';
 import Media from 'react-media';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
 import Header from '../components/header/header';
 import { device } from '../config/device';
 import PortfolioIcons from '../components/portfolio-icons/portfolio-icons';
 import Footer from '../components/footer/footer';
+import { Flex } from '../components/Base/Base';
 
 export default function MainTemplate({ children }) {
     return (
         <StyledLayout>
             <Header />
-            <Body>
+            <Flex justifyContent="space-between">
                 <Main>{children}</Main>
                 <Media query={device.tablet}>
                     <PortfolioIcons />
                 </Media>
-            </Body>
+            </Flex>
             <Footer />
             <AppStyle />
         </StyledLayout>
@@ -34,6 +35,7 @@ const AppStyle = createGlobalStyle`
     }
 `;
 
+//todo make Box
 const StyledLayout = styled.div`
     margin: 3rem auto;
     max-width: 1290px;
@@ -43,11 +45,7 @@ const StyledLayout = styled.div`
     }
 `;
 
-const Body = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;
-
+//todo make Box
 const Main = styled.div`
     width: 100%;
     @media ${device.tablet} {
