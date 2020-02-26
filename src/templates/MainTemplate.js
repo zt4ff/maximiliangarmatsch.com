@@ -1,10 +1,10 @@
 import React from 'react';
 import Media from 'react-media';
 import { createGlobalStyle } from 'styled-components';
-import Header from '../components/header/Header';
+import Header from '../components/Header/Header';
 import { device } from '../config/device';
 import PortfolioIcons from '../components/PortfolioIcons/PortfolioIcons';
-import Footer from '../components/footer/Footer';
+import Footer from '../components/Footer/Footer';
 import { Box, Flex } from '../components/Base/Base';
 
 export default function MainTemplate({ children }) {
