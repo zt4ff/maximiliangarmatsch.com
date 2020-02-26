@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { device } from '../../config/device';
 import image from './Max.png';
 
-function ImageMaximilian() {
-    return <IMG src={image} alt="Maximilian Garmatsch" />;
+export default function ImageMaximilian() {
+    return <Image src={image} alt="Maximilian Garmatsch" />;
 }
 
-const IMG = styled.img`
+const Image = styled.img`
     width: 125px;
     min-width: 125px;
     height: 125px;
@@ -20,5 +20,3 @@ const IMG = styled.img`
         margin-bottom: 3rem;
     }
 `;
-
-export default ImageMaximilian;

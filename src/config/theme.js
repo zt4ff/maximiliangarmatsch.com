@@ -1,3 +1,10 @@
+const breakpoints = ['375px', '768px', '1024px', '1125px', '1920px'];
+
+breakpoints.sm = breakpoints[0];
+breakpoints.md = breakpoints[1];
+breakpoints.lg = breakpoints[2];
+breakpoints.xl = breakpoints[3];
+
 export default {
     fontSizes: [], // [10, 12, 14, 16, 20, 24, 30, 38]
     fontWeights: {
@@ -11,18 +18,13 @@ export default {
     colors: {
         black: '#000',
         white: '#fff',
-        grey: '#f8f9fa', //background-color
-        transparent: '#00000000',
-        primary: '#5ad192',
-        green: '#52C41A', // green-6
-        red: '#ED463B',
-        orange: '#FFA500',
-        darkOrange: '#FD7900',
-        silver: '#C0C0C0',
+        green: '#0de99a',
+        grey: '#f8f9fa',
+        darkgrey: '#191919',
     },
     space: [], // [0, 4, 8, 16, 32, 64, 128, 256]
     // fonts: {
     //     sans: 'system-ui, sans-serif',
     // },
-    breakpoints: [], // [768, 1024, 1280, 1440]
+    breakpoints,
 };

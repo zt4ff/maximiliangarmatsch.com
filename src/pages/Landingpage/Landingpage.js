@@ -1,34 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
-import MainTemplate from '../../templates/main-template';
-import { device } from '../../config/device';
+import MainTemplate from '../../templates/MainTemplate';
+import { Flex } from '../../components/Base/Base';
 import ImageMaximilian from './ImageMaximilian';
 import TextWelcome from './TextWelcome';
 
-function Landingpage() {
+export default function Landingpage() {
     return (
         <MainTemplate>
-            <Box>
+            <Flex
+                flexDirection={{ sm: 'column', md: 'row' }}
+                alignItems="center"
+                ml={{ md: '1rem', lg: '5rem' }}
+                mt={{ lg: '5rem' }}
+                width={{ lg: '90%' }}
+            >
                 <ImageMaximilian />
                 <TextWelcome />
-            </Box>
+            </Flex>
         </MainTemplate>
     );
 }
-
-const Box = styled.div`
-    display: flex;
-    flex-direction: column;
-    @media ${device.tablet} {
-        flex-direction: row;
-        align-items: center;
-        margin-left: 1rem;
-    }
-    @media ${device.laptop} {
-        width: 70%;
-        margin-left: 5rem;
-        margin-top: 7rem;
-    }
-`;
-
-export default Landingpage;

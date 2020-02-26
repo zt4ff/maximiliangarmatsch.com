@@ -1,20 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import NavigationLink from '../Footer/NavigationLink';
 
 export default function BackToHome({ style, arrowStyle }) {
     return (
-        <Box to="/" style={style}>
+        <NavigationLink to="/" style={style}>
             <Arrow style={arrowStyle} />
             Home
-        </Box>
+        </NavigationLink>
     );
 }
-const Box = styled(Link)`
-    color: #fff;
-    text-decoration: none;
-    font-weight: normal;
-`;
+
 const Arrow = styled.span`
     border: solid #fff;
     border-width: 0 2px 2px 0;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
-import ErrorBoundary from '../helpers/error-boundary';
-import LocaleProvider from '../helpers/locale-provider';
+import ErrorBoundary from '../helpers/ErrorBoundary';
+import LocaleProvider from '../helpers/LocaleProvider';
 import Landingpage from '../pages/Landingpage/Landingpage';
-import Impressum from '../pages/impressum/impressum';
+import Impressum from '../pages/impressum/Impressum';
 import theme from '../config/theme';
 
 export default function App() {
