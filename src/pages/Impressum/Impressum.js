@@ -7,7 +7,7 @@ import PrivacyPolicy from './PrivacyPolicy';
 export default function Impressum() {
     return (
         <MainTemplate>
-            <Box lineHeight="1.1rem">
+            <Box lineHeight="1.1rem" mt={{ md: '5rem', lg: '0' }}>
                 <TextAdress />
                 <PrivacyPolicy />
             </Box>

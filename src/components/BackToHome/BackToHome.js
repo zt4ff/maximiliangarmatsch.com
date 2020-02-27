@@ -5,15 +5,15 @@ import { Box } from '../Base/Base';
 export default function BackToHome({ style, arrowStyle }) {
     return (
         <Box
-            position={{ md: 'absolute' }}
+            position={{ lg: 'absolute' }}
             top={{ lg: '5.6rem', xl: '6.6rem', xxl: '7.6rem' }}
-            mt={{ md: '5px' }}
+            mt={{ lg: '5px' }}
         >
             <NavigationLink to="/" fontSize={{ xxl: '22px' }} style={style}>
                 <Box
                     as="span"
                     display="inline-block"
-                    p={{ lg: '3px', xxl: '5px' }}
+                    p={{ sm: '3px', xxl: '5px' }}
                     mb="2px"
                     css={`
                         border: solid #fff;

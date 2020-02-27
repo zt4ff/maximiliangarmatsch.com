@@ -7,6 +7,8 @@ function TextWelcome() {
             color="green"
             fontSize={{ lg: '20px', xxl: '28px' }}
             lineHeight={{ sm: '1.5rem', lg: '20px', xxl: '36px' }}
+            width={{ md: '70%', lg: '100%' }}
+            m={{ md: '15px auto', lg: '0' }}
             textAlign="justify"
         >
             I am a Senior Web Engineer based in Berlin, Germany. My team and I

@@ -7,11 +7,12 @@ import Icon from './Icon';
 export default function PortfolioIcons() {
     return (
         <Flex
-            flexDirection={{ sm: 'row', md: 'column' }}
+            flexDirection={{ md: 'row', lg: 'column' }}
             justifyContent={{ md: 'space-between' }}
-            position={{ sm: 'inherit', md: 'relative' }}
+            position={{ sm: 'inherit', lg: 'relative' }}
             height={{ sm: '100%', lg: '110px', xxl: '130px' }}
             top={{ lg: '6rem', xxl: '13rem' }}
+            width={{ md: '84px', lg: 'auto' }}
         >
             <Icon
                 to="https://github.com/maximiliangarmatsch"

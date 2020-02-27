@@ -8,9 +8,9 @@ export default function Landingpage() {
     return (
         <MainTemplate>
             <Flex
-                flexDirection={{ sm: 'column', md: 'row' }}
+                flexDirection={{ md: 'column', lg: 'row' }}
                 alignItems="center"
-                mt={{ lg: '4rem', xxl: '10rem' }}
+                mt={{ md: '10rem', lg: '4rem', xxl: '10rem' }}
             >
                 <ImageMaximilian />
                 <TextWelcome />
