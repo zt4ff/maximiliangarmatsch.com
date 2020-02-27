@@ -11,7 +11,7 @@ export default function DesktopNavigation() {
             as="footer"
             justifyContent="flex-end"
             bg="transparent"
-            mt={{ xl: '9rem', xxl: '15rem' }}
+            mt={{ lg: '9rem', xxl: '15rem' }}
         >
             <Box as="nav" p="0px">
                 {location.pathname === '/' && (

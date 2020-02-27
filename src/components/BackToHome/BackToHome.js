@@ -6,14 +6,14 @@ export default function BackToHome({ style, arrowStyle }) {
     return (
         <Box
             position={{ md: 'absolute' }}
-            top={{ xl: '6.6rem', xxl: '7.6rem' }}
+            top={{ lg: '5.6rem', xl: '6.6rem', xxl: '7.6rem' }}
             mt={{ md: '5px' }}
         >
             <NavigationLink to="/" fontSize={{ xxl: '22px' }} style={style}>
                 <Box
                     as="span"
                     display="inline-block"
-                    p={{ xl: '3px', xxl: '5px' }}
+                    p={{ lg: '3px', xxl: '5px' }}
                     mb="2px"
                     css={`
                         border: solid #fff;

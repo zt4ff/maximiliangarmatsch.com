@@ -7,7 +7,7 @@ export default function NavigationLink({ to, children, style, fontSize }) {
         <Text
             as={Link}
             color="#ffffff"
-            fontSize={fontSize ? fontSize : { xl: '18px', xxl: '25px' }}
+            fontSize={fontSize ? fontSize : { lg: '18px', xxl: '25px' }}
             css={`
                 text-decoration: none;
             `}

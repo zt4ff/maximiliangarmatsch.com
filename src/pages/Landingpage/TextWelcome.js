@@ -5,8 +5,8 @@ function TextWelcome() {
     return (
         <Text
             color="green"
-            fontSize={{ xl: '20px', xxl: '28px' }}
-            lineHeight={{ sm: '1.5rem', xl: '20px', xxl: '36px' }}
+            fontSize={{ lg: '20px', xxl: '28px' }}
+            lineHeight={{ sm: '1.5rem', lg: '20px', xxl: '36px' }}
             textAlign="justify"
         >
             I am a Senior Web Engineer based in Berlin, Germany. My team and I
