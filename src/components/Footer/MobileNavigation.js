@@ -20,7 +20,7 @@ export default function MobileNavigation() {
             <Flex
                 as="nav"
                 justifyContent="space-between"
-                p={{ sm: '5px 35px', md: '20px 75px' }}
+                p={{ _: '5px 40px', sm: '5px 40px', md: '20px 75px' }}
                 alignItems="center"
             >
                 {location.pathname !== '/' ? (

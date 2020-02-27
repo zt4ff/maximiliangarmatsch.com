@@ -13,7 +13,7 @@ export default function BackToHome({ style, arrowStyle }) {
                 <Box
                     as="span"
                     display="inline-block"
-                    p={{ sm: '3px', xxl: '5px' }}
+                    p={{ _: '3px', sm: '3px', xxl: '5px' }}
                     mb="2px"
                     css={`
                         border: solid #fff;

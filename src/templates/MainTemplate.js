@@ -13,7 +13,7 @@ export default function MainTemplate({ children }) {
             <Header />
             <Flex justifyContent="space-between">
                 <Box width={{ md: '100%', lg: '80%' }}>{children}</Box>
-                <Media query={device.tablet}>
+                <Media query={device.laptop}>
                     <PortfolioIcons />
                 </Media>
             </Flex>

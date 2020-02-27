@@ -6,9 +6,9 @@ import DesktopNavigation from './DesktopNavigation';
 
 export default function Footer() {
     return (
-        <Media queries={{ tablet: device.tablet }}>
+        <Media queries={{ laptop: device.laptop }}>
             {matches =>
-                matches.tablet ? <DesktopNavigation /> : <MobileNavigation />
+                matches.laptop ? <DesktopNavigation /> : <MobileNavigation />
             }
         </Media>
     );

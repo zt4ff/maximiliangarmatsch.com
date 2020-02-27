@@ -10,12 +10,12 @@ export default function Header() {
     let location = useLocation();
     return (
         <Box
-            position={{ md: 'absolute', lg: 'initial' }}
+            position={{ _: 'absolute', sm: 'absolute', lg: 'initial' }}
             top="0"
             left="0"
             width="100%"
             minHeight={{ lg: '150px' }}
-            bg={{ md: 'darkgrey', lg: 'transparent' }}
+            bg={{ _: 'darkgrey', sm: 'darkgrey', lg: 'transparent' }}
         >
             <header>
                 <Logotext />
