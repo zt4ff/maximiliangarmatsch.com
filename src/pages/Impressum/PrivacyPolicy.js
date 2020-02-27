@@ -3,7 +3,7 @@ import { Text } from '../../components/Base/Base';
 
 export default function PrivacyPolicy() {
     return (
-        <Text color="green">
+        <Text color="green" fontSize={{ md: '21px' }}>
             <p>Privacy policy</p>
             <p>
                 Our privacy policy is available for download.

@@ -1,22 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
-import { device } from '../../config/device';
-import image from './Max.png';
+import { Box } from '../../components/Base/Base';
+import image from './Max.jpg';
 
 export default function ImageMaximilian() {
-    return <Image src={image} alt="Maximilian Garmatsch" />;
+    return (
+        <Box
+            as="img"
+            width={{ sm: '125px', xl: '236px' }}
+            height={{ sm: '125px', xl: '236px' }}
+            m={{ sm: '2rem auto', md: '0 2rem 0 0' }}
+            borderRadius="15px 15px 15px 0"
+            css={`
+                box-shadow: -7px 7px 4px rgba(0, 0, 0, 0.25);
+            `}
+            src={image}
+            alt="Maximilian Garmatsch"
+        />
+    );
 }
-
-const Image = styled.img`
-    width: 125px;
-    min-width: 125px;
-    height: 125px;
-    margin: 2rem auto;
-    border-radius: 15px 15px 15px 0;
-    box-shadow: -7px 7px 4px rgba(0, 0, 0, 0.25);
-    @media ${device.tablet} {
-        margin-top: 0;
-        margin-right: 2rem;
-        margin-bottom: 3rem;
-    }
-`;

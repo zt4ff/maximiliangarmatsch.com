@@ -5,6 +5,7 @@ import { device } from '../../config/device';
 export default function TextAdress() {
     return (
         <Text
+            fontSize={{ md: '21px' }}
             maxWidth="80%"
             color="white"
             marginBottom="1.5rem"

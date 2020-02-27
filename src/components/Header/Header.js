@@ -30,7 +30,8 @@ export default function Header() {
 }
 
 const BackToHomeStyle = {
-    position: 'relative',
-    bottom: '3.5rem',
-    fontSize: '0.9rem',
+    position: 'absolute',
+    top: '7.6rem',
+    fontSize: '22px',
+    marginLeft: '5px',
 };

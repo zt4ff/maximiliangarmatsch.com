@@ -7,10 +7,15 @@ export default function DesktopNavigation() {
     let location = useLocation();
 
     return (
-        <Flex as="footer" justifyContent="flex-end" bg="transparent" mt="7rem">
+        <Flex as="footer" justifyContent="flex-end" bg="transparent" mt="15rem">
             <Box as="nav" p="0px">
                 {location.pathname === '/' && (
-                    <NavigationLink to="/impressum">Impressum</NavigationLink>
+                    <NavigationLink
+                        style={{ fontSize: '25px' }}
+                        to="/impressum"
+                    >
+                        Impressum
+                    </NavigationLink>
                 )}
             </Box>
         </Flex>

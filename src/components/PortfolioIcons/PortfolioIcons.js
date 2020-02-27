@@ -8,9 +8,10 @@ export default function PortfolioIcons() {
     return (
         <Flex
             flexDirection={{ sm: 'row', md: 'column' }}
+            justifyContent={{ md: 'space-between' }}
             position={{ sm: 'inherit', md: 'relative' }}
-            height="100%"
-            top={{ md: '3rem', lg: '9rem' }}
+            height={{ sm: '100%', md: '130px' }}
+            top={{ md: '13rem' }}
         >
             <Icon
                 to="https://github.com/maximiliangarmatsch"
