@@ -1,22 +1,30 @@
 import React from 'react';
-import styled from 'styled-components';
 import NavigationLink from '../Footer/NavigationLink';
+import { Box } from '../Base/Base';
 
 export default function BackToHome({ style, arrowStyle }) {
     return (
-        <NavigationLink to="/" style={style}>
-            <Arrow style={arrowStyle} />
-            Home
-        </NavigationLink>
+        <Box
+            position={{ md: 'absolute' }}
+            top={{ xl: '6.6rem', xxl: '7.6rem' }}
+            mt={{ md: '5px' }}
+        >
+            <NavigationLink to="/" fontSize={{ xxl: '22px' }} style={style}>
+                <Box
+                    as="span"
+                    display="inline-block"
+                    p={{ xl: '3px', xxl: '5px' }}
+                    mb="2px"
+                    css={`
+                        border: solid #fff;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(135deg);
+                        -webkit-transform: rotate(135deg);
+                    `}
+                    style={arrowStyle}
+                />
+                Home
+            </NavigationLink>
+        </Box>
     );
 }
-
-const Arrow = styled.span`
-    border: solid #fff;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 5px;
-    margin-bottom: 2px;
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-`;

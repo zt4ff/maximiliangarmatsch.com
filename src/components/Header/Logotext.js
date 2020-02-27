@@ -7,7 +7,7 @@ export default function Logotext() {
             as="h1"
             textAlign={{ sm: 'center', md: 'left' }}
             fontWeight={{ sm: 'inherit', md: 'normal' }}
-            fontSize={{ sm: '23px', md: '3rem', xl: '72px' }}
+            fontSize={{ sm: '23px', md: '3rem', xl: '48px', xxl: '72px' }}
             lineHeight={{ sm: '27px', md: '84px' }}
         >
             Maximilian Garmatsch

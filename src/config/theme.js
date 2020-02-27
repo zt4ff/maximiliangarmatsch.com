@@ -4,6 +4,7 @@ breakpoints.sm = breakpoints[0];
 breakpoints.md = breakpoints[1];
 breakpoints.lg = breakpoints[2];
 breakpoints.xl = breakpoints[3];
+breakpoints.xxl = breakpoints[4];
 
 export default {
     fontSizes: [], // [10, 12, 14, 16, 20, 24, 30, 38]

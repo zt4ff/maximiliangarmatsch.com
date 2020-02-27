@@ -20,18 +20,9 @@ export default function Header() {
             <header>
                 <Logotext />
                 <Media query={device.tablet}>
-                    {location.pathname !== '/' && (
-                        <BackToHome style={BackToHomeStyle} />
-                    )}
+                    {location.pathname !== '/' && <BackToHome />}
                 </Media>
             </header>
         </Box>
     );
 }
-
-const BackToHomeStyle = {
-    position: 'absolute',
-    top: '7.6rem',
-    fontSize: '22px',
-    marginLeft: '5px',
-};
