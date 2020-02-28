@@ -1,19 +1,22 @@
 import React from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import ErrorBoundary from '../helpers/ErrorBoundary';
 import LocaleProvider from '../helpers/LocaleProvider';
 import Landingpage from '../pages/Landingpage/Landingpage';
 import Impressum from '../pages/Impressum/Impressum';
 import theme from '../config/theme';
-import DesktopTemplate from '../templates/DesktopTemplate';
+import DeviceProvider from '../helpers/DeviceProvider';
 
 export default function App() {
+    const matches = useMediaQuery('(min-width:600px)');
+
     return (
         <ErrorBoundary>
             <ThemeProvider theme={theme}>
                 <LocaleProvider>
-                    <DesktopTemplate>
+                    <DeviceProvider>
                         <Switch>
                             <Route exact path="/">
                                 <Landingpage />
@@ -22,7 +25,7 @@ export default function App() {
                                 <Impressum />
                             </Route>
                         </Switch>
-                    </DesktopTemplate>
+                    </DeviceProvider>
                     <AppStyle />
                 </LocaleProvider>
             </ThemeProvider>
