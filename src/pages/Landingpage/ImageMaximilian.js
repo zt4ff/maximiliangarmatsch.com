@@ -6,7 +6,8 @@ export default function ImageMaximilian() {
     return (
         <Box
             as="img"
-            width={{ _: '125px', sm: '125px', md: '180px', xxl: '236px' }}
+            minWidth={{ _: '125px', sm: '125px', md: '180px', xxl: '236px' }}
+            maxWidth={{ _: '125px', sm: '125px', md: '180px', xxl: '236px' }}
             height={{ _: '125px', sm: '125px', md: '180px', xxl: '236px' }}
             m={{
                 _: '2rem auto',
