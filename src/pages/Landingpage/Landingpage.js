@@ -1,12 +1,12 @@
 import React from 'react';
-import MainTemplate from '../../templates/MainTemplate';
+import DesktopTemplate from '../../templates/DesktopTemplate';
 import { Flex } from '../../components/Base/Base';
 import ImageMaximilian from './ImageMaximilian';
 import TextWelcome from './TextWelcome';
 
 export default function Landingpage() {
     return (
-        <MainTemplate>
+        <DesktopTemplate>
             <Flex
                 flexDirection={{ _: 'column', sm: 'column', lg: 'row' }}
                 alignItems="center"
@@ -21,6 +21,6 @@ export default function Landingpage() {
                 <ImageMaximilian />
                 <TextWelcome />
             </Flex>
-        </MainTemplate>
+        </DesktopTemplate>
     );
 }
