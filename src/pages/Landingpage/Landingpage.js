@@ -8,13 +8,6 @@ export default function Landingpage() {
         <Flex
             flexDirection={{ _: 'column', sm: 'column', lg: 'row' }}
             alignItems="center"
-            mt={{
-                _: '2rem',
-                sm: '2rem',
-                md: '10rem',
-                lg: '4rem',
-                xxl: '10rem',
-            }}
         >
             <ImageMaximilian />
             <TextWelcome />

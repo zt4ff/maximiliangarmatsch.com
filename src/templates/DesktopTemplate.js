@@ -8,21 +8,41 @@ import { Box } from '../components/Base/Base';
 export default function DesktopTemplate({ children }) {
     return (
         <>
-            <Grid container spacing={3}>
-                <Grid item xs={2}></Grid>
-                <Grid item xs={8}>
+            <Box as={Grid} container>
+                <Box as={Grid} item sm={1} xl={2} />
+                <Box as={Grid} item sm={11} xl={10}>
                     <Header />
+                </Box>
+            </Box>
+            <Box as={Grid} container mt={{ xl: '5rem', xxl: '7rem' }}>
+                <Box as={Grid} item sm={1} xl={2} />
+                <Box as={Grid} item sm={7} xl={7}>
                     <Box>{children}</Box>
-                </Grid>
-                <Grid item xs={2} Flex justifyContent="flex-end">
+                </Box>
+                <Box
+                    as={Grid}
+                    item
+                    container
+                    sm={4}
+                    xl={3}
+                    justify="flex-end"
+                    alignItems="center"
+                    pr="3rem"
+                >
                     <PortfolioIcons />
-                </Grid>
-            </Grid>
-            <Grid container spacing={3}>
-                <Grid item xs={12} Flex justifyContent="flex-end">
+                </Box>
+            </Box>
+            <Box
+                as={Grid}
+                container
+                justify="flex-end"
+                position="fixed"
+                bottom="3rem"
+            >
+                <Box as={Grid} item xs={12} pr="3rem">
                     <Footer />
-                </Grid>
-            </Grid>
+                </Box>
+            </Box>
         </>
     );
 }

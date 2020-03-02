@@ -6,8 +6,9 @@ export default function BackToHome({ style, arrowStyle }) {
     return (
         <Box
             position={{ lg: 'absolute' }}
-            top={{ lg: '5.6rem', xl: '6.6rem', xxl: '7.6rem' }}
+            top={{ lg: '9rem', xl: '9rem', xxl: '9.5rem' }}
             mt={{ lg: '5px' }}
+            ml={{ lg: '5px' }}
         >
             <NavigationLink to="/" fontSize={{ xxl: '22px' }} style={style}>
                 <Box

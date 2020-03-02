@@ -1,7 +1,6 @@
 import React from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import ErrorBoundary from '../helpers/ErrorBoundary';
 import LocaleProvider from '../helpers/LocaleProvider';
 import Landingpage from '../pages/Landingpage/Landingpage';
@@ -10,8 +9,6 @@ import theme from '../config/theme';
 import DeviceProvider from '../helpers/DeviceProvider';
 
 export default function App() {
-    const matches = useMediaQuery('(min-width:600px)');
-
     return (
         <ErrorBoundary>
             <ThemeProvider theme={theme}>
