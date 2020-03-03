@@ -1,14 +1,18 @@
 import React from 'react';
-import Media from 'react-media';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import DesktopTemplate from '../templates/DesktopTemplate';
-import { device } from '../config/device';
+import MobileTemplate from '../templates/MobileTemplate';
+import theme from '../config/theme';
 
 export default function DeviceProvider({ children }) {
+    const matches = useMediaQuery(`(min-width: ${theme.breakpoints.md})`);
     return (
         <>
-            <Media query={device.laptop}>
+            {matches ? (
                 <DesktopTemplate>{children}</DesktopTemplate>
-            </Media>
+            ) : (
+                <MobileTemplate>{children}</MobileTemplate>
+            )}
         </>
     );
 }

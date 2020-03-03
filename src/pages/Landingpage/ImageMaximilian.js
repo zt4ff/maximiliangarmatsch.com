@@ -12,7 +12,7 @@ export default function ImageMaximilian() {
             m={{
                 _: '2rem auto',
                 sm: '2rem auto',
-                lg: '0 3rem 0 0',
+                md: '0 3rem 0 0',
                 xxl: '0 5rem 0 0',
             }}
             borderRadius="15px 15px 15px 0"

@@ -4,11 +4,12 @@ import { Text } from '../../components/Base/Base';
 function TextWelcome() {
     return (
         <Text
+            as="p"
             color="green"
-            fontSize={{ lg: '20px', xxl: '28px' }}
-            lineHeight={{ sm: '1.5rem', lg: '20px', xxl: '36px' }}
-            width={{ _: '80%', md: '70%', lg: '100%' }}
-            m={{ md: '15px auto', lg: '0' }}
+            fontSize={{ md: '20px', xxl: '28px' }}
+            lineHeight={{ _: '1.5rem', md: '20px', xxl: '36px' }}
+            width={{ _: '80%', sm: '60%' }}
+            m={{ sm: '15px auto', lg: '0' }}
             textAlign="justify"
         >
             I am a Senior Web Engineer based in Berlin, Germany. My team and I

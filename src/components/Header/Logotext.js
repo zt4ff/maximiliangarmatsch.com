@@ -5,8 +5,8 @@ export default function Logotext() {
     return (
         <Text
             as="h1"
-            textAlign={{ _: 'center', sm: 'center', lg: 'left' }}
-            fontWeight={{ _: 'inherit', sm: 'inherit', lg: 'normal' }}
+            textAlign={{ _: 'center', sm: 'center', md: 'left' }}
+            fontWeight={{ _: 'inherit', sm: 'inherit', md: 'normal' }}
             fontSize={{
                 _: '23px',
                 sm: '23px',
@@ -16,8 +16,7 @@ export default function Logotext() {
             }}
             lineHeight={{
                 _: '27px',
-                sm: '27px',
-                md: '42px',
+                sm: '42px',
                 lg: '56px',
                 xxl: '84px',
             }}

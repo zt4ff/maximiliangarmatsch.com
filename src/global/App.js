@@ -40,5 +40,6 @@ const AppStyle = createGlobalStyle`
         line-height: 2rem;
         color: #ffffff;
         background: #222222;
+        margin: 0;
     }
 `;

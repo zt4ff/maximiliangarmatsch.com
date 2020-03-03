@@ -5,10 +5,10 @@ import { Box } from '../Base/Base';
 export default function BackToHome({ style, arrowStyle }) {
     return (
         <Box
-            position={{ lg: 'absolute' }}
-            top={{ lg: '9rem', xl: '9rem', xxl: '9.5rem' }}
-            mt={{ lg: '5px' }}
-            ml={{ lg: '5px' }}
+            position={{ md: 'absolute' }}
+            top={{ md: '4.5rem', lg: '8.2rem', xxl: '9.5rem' }}
+            mt={{ md: '5px' }}
+            ml={{ md: '5px' }}
         >
             <NavigationLink to="/" fontSize={{ xxl: '22px' }} style={style}>
                 <Box

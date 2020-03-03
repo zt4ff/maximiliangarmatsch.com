@@ -8,7 +8,7 @@ export default function DesktopNavigation() {
 
     return (
         <Flex as="footer" justifyContent="flex-end" bg="transparent">
-            <Box as="nav" p="0px">
+            <Box as="nav" pr="7px">
                 {location.pathname === '/' && (
                     <NavigationLink to="/impressum">Impressum</NavigationLink>
                 )}

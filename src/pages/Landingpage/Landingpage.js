@@ -6,7 +6,7 @@ import TextWelcome from './TextWelcome';
 export default function Landingpage() {
     return (
         <Flex
-            flexDirection={{ _: 'column', sm: 'column', lg: 'row' }}
+            flexDirection={{ _: 'column', sm: 'column', md: 'row' }}
             alignItems="center"
         >
             <ImageMaximilian />

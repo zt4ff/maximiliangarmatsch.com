@@ -3,12 +3,7 @@ import { Text } from '../../components/Base/Base';
 
 export default function TextAdress() {
     return (
-        <Text
-            fontSize={{ md: '18px', xxl: '21px' }}
-            maxWidth={{ lg: '80%', md: '300px' }}
-            color="white"
-            marginBottom="1.5rem"
-        >
+        <Text fontSize={{ xxl: '18px' }} color="white" marginBottom="1.5rem">
             Maximilian Garmatsch <br />
             Bornheimer Landstrasse 37 <br />
             60316 Frankfurt am Main <br />

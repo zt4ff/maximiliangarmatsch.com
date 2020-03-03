@@ -1,15 +1,10 @@
 import React from 'react';
-import Media from 'react-media';
-import { device } from '../../config/device';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import theme from '../../config/theme';
 import MobileNavigation from './MobileNavigation';
 import DesktopNavigation from './DesktopNavigation';
 
 export default function Footer() {
-    return (
-        <Media queries={{ laptop: device.laptop }}>
-            {matches =>
-                matches.laptop ? <DesktopNavigation /> : <MobileNavigation />
-            }
-        </Media>
-    );
+    const matches = useMediaQuery(`(min-width: ${theme.breakpoints.md})`);
+    return <>{matches ? <DesktopNavigation /> : <MobileNavigation />}</>;
 }
