@@ -1,11 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import BackToHome from '../BackToHome/BackToHome';
+import NavLinkHome from '../Navigation/NavLinkHome';
 import PortfolioIcons from '../PortfolioIcons/PortfolioIcons';
 import { Box, Flex } from '../Base/Base';
-import NavigationLink from './NavigationLink';
+import NavLink from '../Navigation/NavLink';
 
-export default function MobileNavigation() {
+export default function FooterMobile() {
     let location = useLocation();
 
     return (
@@ -24,9 +24,9 @@ export default function MobileNavigation() {
                 alignItems="center"
             >
                 {location.pathname !== '/' ? (
-                    <BackToHome />
+                    <NavLinkHome />
                 ) : (
-                    <NavigationLink to="/impressum">Impressum</NavigationLink>
+                    <NavLink to="/impressum">Impressum</NavLink>
                 )}
                 <PortfolioIcons />
             </Flex>

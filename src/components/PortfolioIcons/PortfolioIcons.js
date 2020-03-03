@@ -1,7 +1,5 @@
 import React from 'react';
 import { Flex } from '../Base/Base';
-import GitHub from './GitHub.png';
-import LinkedIn from './LinkedIn.png';
 import Icon from './Icon';
 
 export default function PortfolioIcons() {
@@ -17,12 +15,12 @@ export default function PortfolioIcons() {
             <Icon
                 to="https://github.com/maximiliangarmatsch"
                 alt="GitHub"
-                iconSrc={GitHub}
+                iconSrc="/assets/GitHub.png"
             />
             <Icon
                 to="https://www.linkedin.com/in/maximilian-garmatsch/"
                 alt="LinkedIn"
-                iconSrc={LinkedIn}
+                iconSrc="/assets/LinkedIn.png"
             />
         </Flex>
     );

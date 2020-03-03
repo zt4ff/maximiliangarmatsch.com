@@ -3,18 +3,18 @@ import Grid from '@material-ui/core/Grid';
 import { useLocation } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import PortfolioIcons from '../components/PortfolioIcons/PortfolioIcons';
-import Footer from '../components/Footer/Footer';
+import FooterDesktop from '../components/Footer/FooterDesktop';
 import { Box } from '../components/Base/Base';
 
-export default function DesktopTemplate({ children }) {
+export default function TemplateDesktop({ children }) {
     let location = useLocation();
     const isHome = location.pathname === '/';
 
     return (
         <Box as={Grid} container>
-            <Box as={Grid} sm={2} />
-            <Box as={Grid} container item sm={10}>
-                <Box as={Grid} item container>
+            <Box as={Grid} item sm={2} />
+            <Box as={Grid} item sm={10}>
+                <Box as={Grid} container>
                     <Header />
                 </Box>
                 <Box
@@ -53,7 +53,7 @@ export default function DesktopTemplate({ children }) {
                 right="3rem"
             >
                 <Box as={Grid} item sm={12}>
-                    <Footer />
+                    <FooterDesktop />
                 </Box>
             </Box>
         </Box>

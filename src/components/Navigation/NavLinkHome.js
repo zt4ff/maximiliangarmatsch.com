@@ -1,8 +1,8 @@
 import React from 'react';
-import NavigationLink from '../Footer/NavigationLink';
 import { Box } from '../Base/Base';
+import NavLink from './NavLink';
 
-export default function BackToHome({ style, arrowStyle }) {
+export default function NavLinkHome({ style, arrowStyle }) {
     return (
         <Box
             position={{ md: 'absolute' }}
@@ -10,7 +10,7 @@ export default function BackToHome({ style, arrowStyle }) {
             mt={{ md: '5px' }}
             ml={{ md: '5px' }}
         >
-            <NavigationLink to="/" fontSize={{ xxl: '22px' }} style={style}>
+            <NavLink to="/" fontSize={{ xxl: '22px' }} style={style}>
                 <Box
                     as="span"
                     display="inline-block"
@@ -25,7 +25,7 @@ export default function BackToHome({ style, arrowStyle }) {
                     style={arrowStyle}
                 />
                 Home
-            </NavigationLink>
+            </NavLink>
         </Box>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import DesktopTemplate from '../templates/DesktopTemplate';
-import MobileTemplate from '../templates/MobileTemplate';
+import TemplateDesktop from '../templates/TemplateDesktop';
+import TemplateMobile from '../templates/TemplateMobile';
 import theme from '../config/theme';
 
 export default function DeviceProvider({ children }) {
@@ -9,9 +9,9 @@ export default function DeviceProvider({ children }) {
     return (
         <>
             {matches ? (
-                <DesktopTemplate>{children}</DesktopTemplate>
+                <TemplateDesktop>{children}</TemplateDesktop>
             ) : (
-                <MobileTemplate>{children}</MobileTemplate>
+                <TemplateMobile>{children}</TemplateMobile>
             )}
         </>
     );

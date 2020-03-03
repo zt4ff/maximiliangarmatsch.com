@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Text } from '../Base/Base';
 
-export default function NavigationLink({ to, children, style, fontSize }) {
+export default function NavLink({ to, children, style, fontSize }) {
     return (
         <Text
             as={Link}

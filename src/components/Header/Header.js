@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Media from 'react-media';
 import { Flex } from '../Base/Base';
 import { device } from '../../config/device';
-import BackToHome from '../BackToHome/BackToHome';
+import NavLinkHome from '../Navigation/NavLinkHome';
 import TextLogo from './TextLogo';
 
 export default function Header() {
@@ -19,7 +19,7 @@ export default function Header() {
             <header style={{ width: '100%' }}>
                 <TextLogo />
                 <Media query={device.tablet}>
-                    {location.pathname === '/impressum' && <BackToHome />}
+                    {location.pathname === '/impressum' && <NavLinkHome />}
                 </Media>
             </header>
         </Flex>
