@@ -12,14 +12,8 @@ export default function DesktopTemplate({ children }) {
 
     return (
         <Box as={Grid} container>
-            {isHome && <Box as={Grid} item sm={2} />}
-            <Box
-                as={Grid}
-                container
-                item
-                sm={isHome ? 10 : 12}
-                ml={!isHome ? '3rem  !important' : '0'}
-            >
+            <Box as={Grid} sm={2} />
+            <Box as={Grid} container item sm={10}>
                 <Box as={Grid} item container>
                     <Header />
                 </Box>

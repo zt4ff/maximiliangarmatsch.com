@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text } from '../../components/Base/Base';
+import { Text } from '../../../components/Base/Base';
 
-export default function PrivacyPolicy() {
+export default function TextPrivacyPolicy() {
     return (
         <Text color="green" fontSize={{ lg: '18px' }}>
             <p>Privacy policy</p>

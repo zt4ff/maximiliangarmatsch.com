@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box } from '../../components/Base/Base';
-import image from './Max.jpg';
+import { Box } from '../../../components/Base/Base';
 
 export default function ImageMaximilian() {
     return (
@@ -15,11 +14,12 @@ export default function ImageMaximilian() {
                 md: '0 3rem 0 0',
                 xxl: '0 5rem 0 0',
             }}
+            alignSelf="flex-start"
             borderRadius="15px 15px 15px 0"
             css={`
                 box-shadow: -7px 7px 4px rgba(0, 0, 0, 0.25);
             `}
-            src={image}
+            src="/assets/Max.jpg"
             alt="Maximilian Garmatsch"
         />
     );

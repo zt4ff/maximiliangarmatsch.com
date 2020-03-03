@@ -4,7 +4,7 @@ import Media from 'react-media';
 import { Flex } from '../Base/Base';
 import { device } from '../../config/device';
 import BackToHome from '../BackToHome/BackToHome';
-import Logotext from './Logotext';
+import TextLogo from './TextLogo';
 
 export default function Header() {
     let location = useLocation();
@@ -17,9 +17,9 @@ export default function Header() {
             bg={{ _: 'darkgrey', sm: 'darkgrey', md: 'transparent' }}
         >
             <header style={{ width: '100%' }}>
-                <Logotext />
+                <TextLogo />
                 <Media query={device.tablet}>
-                    {location.pathname !== '/' && <BackToHome />}
+                    {location.pathname === '/impressum' && <BackToHome />}
                 </Media>
             </header>
         </Flex>

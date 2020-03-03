@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from '../Base/Base';
 
-export default function Logotext() {
+export default function TextLogo() {
     return (
         <Text
             as="h1"

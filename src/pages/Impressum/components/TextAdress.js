@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '../../components/Base/Base';
+import { Text } from '../../../components/Base/Base';
 
 export default function TextAdress() {
     return (
