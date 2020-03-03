@@ -25,7 +25,11 @@ export default function DesktopTemplate({ children }) {
                 </Box>
                 <Box
                     as={Grid}
-                    mt={isHome ? { md: '5rem', xxl: '7rem !important' } : '0'}
+                    mt={
+                        isHome
+                            ? { md: '5rem !important', xxl: '7rem !important' }
+                            : '0'
+                    }
                     item
                     container
                 >
