@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '../Base/Base';
+import { Box } from '../../../components/Base/Base';
 import NavLink from './NavLink';
 
 export default function NavLinkHome({ style, arrowStyle }) {

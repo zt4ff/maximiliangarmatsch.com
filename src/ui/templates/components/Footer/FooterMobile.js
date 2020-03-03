@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import NavLinkHome from '../Navigation/NavLinkHome';
-import PortfolioIcons from '../PortfolioIcons/PortfolioIcons';
-import { Box, Flex } from '../Base/Base';
+import PortfolioIcons from '../../../components/PortfolioIcons/PortfolioIcons';
+import { Box, Flex } from '../../../components/Base/Base';
 import NavLink from '../Navigation/NavLink';
 
 export default function FooterMobile() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import TemplateDesktop from '../templates/TemplateDesktop';
-import TemplateMobile from '../templates/TemplateMobile';
+import TemplateDesktop from '../ui/templates/TemplateDesktop';
+import TemplateMobile from '../ui/templates/TemplateMobile';
 import theme from '../config/theme';
 
 export default function DeviceProvider({ children }) {

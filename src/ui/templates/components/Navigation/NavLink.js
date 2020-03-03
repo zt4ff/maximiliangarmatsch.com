@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Text } from '../Base/Base';
+import { Text } from '../../../components/Base/Base';
 
 export default function NavLink({ to, children, style, fontSize }) {
     return (

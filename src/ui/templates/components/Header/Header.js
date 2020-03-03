@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Media from 'react-media';
-import { Flex } from '../Base/Base';
-import { device } from '../../config/device';
+import { Flex } from '../../../components/Base/Base';
+import { device } from '../../../../config/device';
 import NavLinkHome from '../Navigation/NavLinkHome';
 import TextLogo from './TextLogo';
 

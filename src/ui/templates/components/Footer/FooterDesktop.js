@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Box, Flex } from '../Base/Base';
+import { Box, Flex } from '../../../components/Base/Base';
 import NavLink from '../Navigation/NavLink';
 
 export default function FooterDesktop() {

@@ -1,10 +1,10 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { useLocation } from 'react-router-dom';
-import Header from '../components/Header/Header';
 import PortfolioIcons from '../components/PortfolioIcons/PortfolioIcons';
-import FooterDesktop from '../components/Footer/FooterDesktop';
 import { Box } from '../components/Base/Base';
+import Header from './components/Header/Header';
+import FooterDesktop from './components/Footer/FooterDesktop';
 
 export default function TemplateDesktop({ children }) {
     let location = useLocation();

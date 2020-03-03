@@ -3,10 +3,10 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import ErrorBoundary from '../helpers/ErrorBoundary';
 import LocaleProvider from '../helpers/LocaleProvider';
-import Landingpage from '../pages/Landingpage/Landingpage';
-import Impressum from '../pages/Impressum/Impressum';
 import theme from '../config/theme';
 import DeviceProvider from '../helpers/DeviceProvider';
+import Landingpage from './pages/Landingpage/Landingpage';
+import Impressum from './pages/Impressum/Impressum';
 
 export default function App() {
     return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Header from '../components/Header/Header';
-import FooterMobile from '../components/Footer/FooterMobile';
 import { Box } from '../components/Base/Base';
+import Header from './components/Header/Header';
+import FooterMobile from './components/Footer/FooterMobile';
 
 export default function TemplateMobile({ children }) {
     return (
