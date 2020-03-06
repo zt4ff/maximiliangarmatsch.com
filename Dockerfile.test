@@ -25,5 +25,5 @@ COPY . /usr/src/app
 # Environment variables
 ENV NODE_ENV test
 
-# Main command "test" removed , no test for now
-CMD [ "npm" ]
+# Main command
+CMD [ "npm", "test" ]
