@@ -7,6 +7,7 @@ import theme from '../config/theme';
 import DeviceProvider from '../helpers/DeviceProvider';
 import Landingpage from './pages/Landingpage/Landingpage';
 import Impressum from './pages/Impressum/Impressum';
+import MyTeam from './pages/MyTeam/MyTeam';
 
 export default function App() {
     return (
@@ -20,6 +21,9 @@ export default function App() {
                             </Route>
                             <Route path="/impressum">
                                 <Impressum />
+                            </Route>
+                            <Route path="/myteam">
+                                <MyTeam />
                             </Route>
                         </Switch>
                     </DeviceProvider>

@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { useLocation } from 'react-router-dom';
 import PortfolioIcons from '../components/PortfolioIcons/PortfolioIcons';
 import { Box } from '../components/Base/Base';
-import Header from './components/Header/Header';
+import HeaderDesktop from './components/Header/HeaderDesktop';
 import FooterDesktop from './components/Footer/FooterDesktop';
 
 export default function TemplateDesktop({ children }) {
@@ -15,7 +15,7 @@ export default function TemplateDesktop({ children }) {
             <Box as={Grid} item sm={2} />
             <Box as={Grid} item sm={10}>
                 <Box as={Grid} container>
-                    <Header />
+                    <HeaderDesktop />
                 </Box>
                 <Box
                     as={Grid}
