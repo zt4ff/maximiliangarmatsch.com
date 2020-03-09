@@ -7,8 +7,10 @@ npm install
 npm start
 ```
 
-
-### Boilerplate Texts (move to boilerplate readme)
+### 2. Deployment
+I use AWS CI/CD for automatic deployment. 
+After pushing a branch, AWS automatically creates a preview build including snapshots. 
+When a pullrequest is merged to the master branch, AWS automatically deploys to production.
 
 #### Working Tools / Code Quality Tools
 - Commitlint: makes sure that commit messages are formatted nicely.
