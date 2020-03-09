@@ -25,6 +25,12 @@ export default function App() {
                             <Route path="/myteam">
                                 <MyTeam />
                             </Route>
+                            <Route path="/45min">
+                                {() => {
+                                    window.location.href =
+                                        'https://calendly.com/maximilian-garmatsch/45min';
+                                }}
+                            </Route>
                         </Switch>
                     </DeviceProvider>
                     <AppStyle />
