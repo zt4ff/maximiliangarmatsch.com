@@ -7,6 +7,7 @@ import theme from '../config/theme';
 import DeviceProvider from '../helpers/DeviceProvider';
 import Landingpage from './pages/Landingpage/Landingpage';
 import Impressum from './pages/Impressum/Impressum';
+import MyTeam from './pages/MyTeam/MyTeam';
 
 export default function App() {
     return (
@@ -20,6 +21,15 @@ export default function App() {
                             </Route>
                             <Route path="/impressum">
                                 <Impressum />
+                            </Route>
+                            <Route path="/myteam">
+                                <MyTeam />
+                            </Route>
+                            <Route path="/45min">
+                                {() => {
+                                    window.location.href =
+                                        'https://calendly.com/maximilian-garmatsch/45min';
+                                }}
                             </Route>
                         </Switch>
                     </DeviceProvider>

@@ -6,7 +6,7 @@ import { device } from '../../../../config/device';
 import NavLinkHome from '../Navigation/NavLinkHome';
 import TextLogo from './TextLogo';
 
-export default function Header() {
+export default function HeaderDesktop() {
     let location = useLocation();
     return (
         <Flex
