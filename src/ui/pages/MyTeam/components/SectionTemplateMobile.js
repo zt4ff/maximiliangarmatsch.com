@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Text } from '../../../components/Base/Base';
 import IconCheckpoint from '../Icons/IconCheckpoint';
-import IconSwipe from '../Icons/IconSwipe';
+import IconSwipeMobile from '../Icons/Mobile/IconSwipeMobile';
 import Line from './Line';
 
-export default function SectionTemplate({
+export default function SectionTemplateMobile({
     id,
     firstLine,
     aligment,
@@ -92,7 +92,7 @@ export default function SectionTemplate({
                 `}
                 onClick={changeSection}
             >
-                <IconSwipe />
+                <IconSwipeMobile />
             </Box>
         </Box>
     );

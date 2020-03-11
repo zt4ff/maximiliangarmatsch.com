@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function IconSoftwareEngineering() {
+export default function IconSoftwareEngineeringMobile() {
     return (
         <svg
             width="50"

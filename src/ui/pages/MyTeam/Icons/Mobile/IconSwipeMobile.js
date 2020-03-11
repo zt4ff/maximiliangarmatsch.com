@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function IconSwipe() {
+export default function IconSwipeMobile() {
     return (
         <svg
             width="16"

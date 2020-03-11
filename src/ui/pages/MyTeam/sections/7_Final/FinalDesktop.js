@@ -1,29 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Text } from '../../../components/Base/Base';
-import Line from '../components/Line';
-import IconCheckpoint from '../Icons/IconCheckpoint';
+import { Box, Text } from '../../../../components/Base/Base';
+import Line from '../../components/Line';
+import IconCheckpoint from '../../Icons/IconCheckpoint';
 
-export default function Final() {
+export default function FinalDesktop() {
     return (
-        <Box id="Final" height="calc(100vh - 75px)" position="relative">
-            <Line
-                position="vertical"
-                length="30px"
-                left="20.5%"
-                transform="translateX(-50%)"
-            />
-            <Line
-                absolute={true}
-                position="horizontal"
-                length="30vw"
-                left="20.5%"
-            />
+        <Box id="Final" height="70vh" position="relative">
             <Line
                 absolute={true}
                 position="vertical"
                 length="130px"
                 left="50%"
+                size="3px"
                 transform="translateX(-50%)"
             />
             <IconCheckpoint
@@ -37,11 +26,12 @@ export default function Final() {
                 position="relative"
                 top="20%"
                 p="20px"
-                lineHeight="1.2rem"
+                fontSize="42px"
+                lineHeight="46px"
                 textAlign="center"
             >
                 <Text as="p" color="green">
-                    That’s us.{' '}
+                    That’s us.
                 </Text>
                 <Text as="p">
                     Now tell us about your project and we will schedule a call

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function IconUiUxDesign() {
+export default function IconUiUxDesignMobile() {
     return (
         <svg
             width="50"

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function IconQualityAssurance() {
+export default function IconQualityAssuranceMobile() {
     return (
         <svg
             width="35"

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function IconServerAdmin() {
+export default function IconServerAdminMobile() {
     return (
         <svg
             width="50"
