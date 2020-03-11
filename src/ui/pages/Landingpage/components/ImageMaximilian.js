@@ -1,13 +1,25 @@
 import React from 'react';
 import { Box } from '../../../components/Base/Base';
 
-export default function ImageMaximilian({ margin }) {
+export default function ImageMaximilian({ margin, size }) {
     return (
         <Box
             as="img"
-            minWidth={{ _: '125px', sm: '125px', md: '180px', xxl: '236px' }}
-            maxWidth={{ _: '125px', sm: '125px', md: '180px', xxl: '236px' }}
-            height={{ _: '125px', sm: '125px', md: '180px', xxl: '236px' }}
+            minWidth={
+                size
+                    ? size
+                    : { _: '125px', sm: '125px', md: '180px', xxl: '236px' }
+            }
+            maxWidth={
+                size
+                    ? size
+                    : { _: '125px', sm: '125px', md: '180px', xxl: '236px' }
+            }
+            height={
+                size
+                    ? size
+                    : { _: '125px', sm: '125px', md: '180px', xxl: '236px' }
+            }
             m={
                 margin
                     ? margin

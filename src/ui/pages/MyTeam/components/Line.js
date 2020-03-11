@@ -10,12 +10,17 @@ export default function Line({
     right,
     top,
     transform,
+    size = '2px',
 }) {
     return (
         <Box
             position={absolute ? 'absolute' : 'relative'}
-            borderLeft={position === 'vertical' ? '2px dashed green' : 'none'}
-            borderTop={position === 'horizontal' ? '2px dashed green' : 'none'}
+            borderLeft={
+                position === 'vertical' ? `${size} dashed #0DE99A` : 'none'
+            }
+            borderTop={
+                position === 'horizontal' ? `${size} dashed #0DE99A` : 'none'
+            }
             width={position === 'horizontal' ? length : '0px'}
             height={position === 'vertical' ? length : '0px'}
             bottom={bottom || 'auto'}

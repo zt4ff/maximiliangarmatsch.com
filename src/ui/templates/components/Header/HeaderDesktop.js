@@ -19,7 +19,7 @@ export default function HeaderDesktop() {
             <header style={{ width: '100%' }}>
                 <TextLogo />
                 <Media query={device.tablet}>
-                    {location.pathname === '/impressum' && <NavLinkHome />}
+                    {location.pathname !== '/' && <NavLinkHome />}
                 </Media>
             </header>
         </Flex>
