@@ -9,8 +9,6 @@ export default function Landingpage() {
             flexDirection={{ _: 'column', sm: 'column', md: 'row' }}
             alignItems="center"
         >
-            <span>Tedst </span>
-
             <ImageMaximilian />
             <TextWelcome />
         </Flex>
