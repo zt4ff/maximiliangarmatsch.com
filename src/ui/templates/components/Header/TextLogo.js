@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { Text } from '../../../components/Base/Base';
 
 export default function TextLogo() {
@@ -21,7 +22,7 @@ export default function TextLogo() {
                 xxl: '84px',
             }}
         >
-            Maximilian Garmatsch
+            <FormattedMessage defaultMessage="Maximilian Garmatsch" />
         </Text>
     );
 }
