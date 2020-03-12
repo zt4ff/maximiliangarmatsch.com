@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box } from '../../components/Base/Base';
 import { SectionContext } from '../../../context/SectionContext';
+import DeviceProvider from '../../../helpers/DeviceProvider';
 import Partner from './sections/1_Partner/Partner';
 import ProductManager from './sections/2_ProductManager/ProductManager';
 import Designer from './sections/3_Designer/Designer';
@@ -31,16 +32,18 @@ export default function MyTeam() {
     }, [sections, selectedSection]);
 
     return (
-        <SectionContext.Provider value={setSelectedSection}>
-            <Box>
-                <Partner />
-                <ProductManager />
-                <Designer />
-                <SoftwareEngineer />
-                <Deployment />
-                <QualityAssurance />
-                <Final />
-            </Box>
-        </SectionContext.Provider>
+        <DeviceProvider>
+            <SectionContext.Provider value={setSelectedSection}>
+                <Box>
+                    <Partner />
+                    <ProductManager />
+                    <Designer />
+                    <SoftwareEngineer />
+                    <Deployment />
+                    <QualityAssurance />
+                    <Final />
+                </Box>
+            </SectionContext.Provider>
+        </DeviceProvider>
     );
 }

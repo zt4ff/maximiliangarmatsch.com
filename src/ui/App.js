@@ -5,7 +5,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import ErrorBoundary from '../helpers/ErrorBoundary';
 import LocaleProvider from '../helpers/LocaleProvider';
 import theme from '../config/theme';
-import DeviceProvider from '../helpers/DeviceProvider';
 import { SizeContext } from '../context/SizeContext';
 import Landingpage from './pages/Landingpage/Landingpage';
 import Impressum from './pages/Impressum/Impressum';
@@ -18,27 +17,25 @@ export default function App() {
         <ErrorBoundary>
             <ThemeProvider theme={theme}>
                 <LocaleProvider>
-                    <DeviceProvider>
-                        <SizeContext.Provider value={isDesktop}>
-                            <Switch>
-                                <Route exact path="/">
-                                    <Landingpage />
-                                </Route>
-                                <Route path="/impressum">
-                                    <Impressum />
-                                </Route>
-                                <Route path="/myteam">
-                                    <MyTeam />
-                                </Route>
-                                <Route path="/45min">
-                                    {() => {
-                                        window.location.href =
-                                            'https://calendly.com/maximilian-garmatsch/45min';
-                                    }}
-                                </Route>
-                            </Switch>
-                        </SizeContext.Provider>
-                    </DeviceProvider>
+                    <SizeContext.Provider value={isDesktop}>
+                        <Switch>
+                            <Route exact path="/">
+                                <Landingpage />
+                            </Route>
+                            <Route path="/impressum">
+                                <Impressum />
+                            </Route>
+                            <Route path="/myteam">
+                                <MyTeam />
+                            </Route>
+                            <Route path="/45min">
+                                {() => {
+                                    window.location.href =
+                                        'https://calendly.com/maximilian-garmatsch/45min';
+                                }}
+                            </Route>
+                        </Switch>
+                    </SizeContext.Provider>
                     <AppStyle />
                 </LocaleProvider>
             </ThemeProvider>
