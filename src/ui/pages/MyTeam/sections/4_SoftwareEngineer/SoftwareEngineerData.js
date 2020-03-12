@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import IconSoftwareEngineeringMobile from '../../Icons/Mobile/IconSoftwareEngineeringMobile';
 import IconSoftwareEngineeringDesktop from '../../Icons/Desktop/IconSoftwareEngineeringDesktop';
 
@@ -6,20 +7,35 @@ export const data = {
     id: 'Designer',
     iconMobile: <IconSoftwareEngineeringMobile />,
     iconDesktop: <IconSoftwareEngineeringDesktop />,
-    headline: <span>Software Engineering</span>,
-    quote:
-        '“We use modern technology to bring your ideas to life, store data securely and ensure the availability of the server around the clock.”',
+    headline: (
+        <span>
+            <FormattedMessage defaultMessage="Software Engineering" />
+        </span>
+    ),
+    quote: (
+        <FormattedMessage defaultMessage="“We use modern technology to bring your ideas to life, store data securely and ensure the availability of the server around the clock.”" />
+    ),
     tools: (
         <>
-            <span> React.JS </span>
+            <span>
+                <FormattedMessage defaultMessage="React.JS" />
+            </span>
             <br />
-            <span> Node.JS / Firebase </span>
+            <span>
+                <FormattedMessage defaultMessage="Node.JS / Firebase" />
+            </span>
             <br />
-            <span> Flutter / Cordova </span>
+            <span>
+                <FormattedMessage defaultMessage="Flutter / Cordova" />
+            </span>
             <br />
-            <span> SQL / NoSQL </span>
+            <span>
+                <FormattedMessage defaultMessage="SQL / NoSQL" />
+            </span>
             <br />
-            <span> Git </span>
+            <span>
+                <FormattedMessage defaultMessage="Git" />
+            </span>
             <br />
         </>
     ),

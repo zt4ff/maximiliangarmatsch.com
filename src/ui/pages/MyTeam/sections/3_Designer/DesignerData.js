@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import IconUiUxDesignMobile from '../../Icons/Mobile/IconUiUxDesignMobile';
 import IconUiUxDesignDesktop from '../../Icons/Desktop/IconUiUxDesignDesktop';
 
@@ -8,22 +9,35 @@ export const data = {
     iconDesktop: <IconUiUxDesignDesktop />,
     headline: (
         <>
-            <span>User Interface</span>
+            <span>
+                <FormattedMessage defaultMessage="User Interface" />
+            </span>
             <br />
-            <span>User Experience</span>
+            <span>
+                <FormattedMessage defaultMessage="User Experience" />
+            </span>
         </>
     ),
-    quote:
-        '“We put our effort into creating an intuitive experience for your users.”',
+    quote: (
+        <FormattedMessage defaultMessage="“We put our effort into creating an intuitive experience for your users.”" />
+    ),
     tools: (
         <>
-            <span> Figma </span>
+            <span>
+                <FormattedMessage defaultMessage="Figma" />
+            </span>
             <br />
-            <span> Adobe Photoshop </span>
+            <span>
+                <FormattedMessage defaultMessage="Adobe Photoshop" />
+            </span>
             <br />
-            <span> Adobe Ilustrator </span>
+            <span>
+                <FormattedMessage defaultMessage="Adobe Ilustrator" />
+            </span>
             <br />
-            <span> Adobe InDesign </span>
+            <span>
+                <FormattedMessage defaultMessage="Adobe InDesign" />
+            </span>
         </>
     ),
 };

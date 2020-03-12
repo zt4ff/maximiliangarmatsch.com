@@ -1,36 +1,47 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { Text } from '../../../components/Base/Base';
 
 export default function TextPrivacyPolicy() {
     return (
         <Text color="green" fontSize={{ lg: '18px' }}>
-            <p>Privacy policy</p>
             <p>
-                Our privacy policy is available for download.
-                <br />
-                Disclaimer
+                <FormattedMessage defaultMessage="Privacy policy" />
             </p>
             <p>
-                The information provided in this website is for general
+                <FormattedMessage defaultMessage="Our privacy policy is available for download." />
+                <br />
+                <FormattedMessage defaultMessage="Disclaimer" />
+            </p>
+            <p>
+                <FormattedMessage
+                    defaultMessage="The information provided in this website is for general
                 information purpose only. ESU-services Ltd. makes no
                 representation about the suitability, reliability, availability,
                 accuracy and completeness of the information contained in the
-                ESU-services website for any purpose.
+                ESU-services website for any purpose."
+                />
             </p>
             <p>
-                All such information is provided without warranties of any kind.
+                <FormattedMessage
+                    defaultMessage="All such information is provided without warranties of any kind.
                 ESU-services Ltd. expressly disclaims legal liability for any
                 direct, indirect, incidental and consequential damages or any
-                damages whatsoever.
+                damages whatsoever."
+                />
             </p>
             <p>
-                ESU-services Ltd. makes no representations or warranties about
-                the contents of any information provided in a linked site.
+                <FormattedMessage
+                    defaultMessage="ESU-services Ltd. makes no representations or warranties about
+                the contents of any information provided in a linked site."
+                />
+
                 <br />
-                Copyright
+                <FormattedMessage defaultMessage="Copyright" />
             </p>
             <p>
-                All content provided on this website is copyrighted. Such
+                <FormattedMessage
+                    defaultMessage="All content provided on this website is copyrighted. Such
                 information may not be copied or distributed, in whole or in
                 part, without prior written consent of ESU-services (if not
                 agreed otherwise with the commissioner of the study). A
@@ -42,13 +53,17 @@ export default function TextPrivacyPolicy() {
                 this website is not allowed for commercial use. If information
                 of this website is used, it has to cited in an appropriate
                 manner stating at least title, author and the companies name and
-                link to the webpage where it is available.
+                link to the webpage where it is available."
+                />
             </p>
             <p>
-                We explicitly keep the right to claim any expenses and costs
-                arising from not respecting our property and copyright rights.{' '}
+                <FormattedMessage
+                    defaultMessage="We explicitly keep the right to claim any expenses and costs
+                arising from not respecting our property and copyright rights."
+                />
+
                 <br />
-                Courtesy
+                <FormattedMessage defaultMessage="Courtesy" />
             </p>
         </Text>
     );

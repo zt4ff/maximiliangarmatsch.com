@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import IconProductManagerMobile from '../../Icons/Mobile/IconProductManagerMobile';
 import IconProductManagerDesktop from '../../Icons/Desktop/IconProductManagerDesktop';
 
@@ -8,24 +9,39 @@ export const data = {
     iconDesktop: <IconProductManagerDesktop />,
     headline: (
         <>
-            <span>Product Manager</span>
+            <span>
+                <FormattedMessage defaultMessage="Product Manager" />
+            </span>
             <br />
-            <span>Team Lead</span>
+            <span>
+                <FormattedMessage defaultMessage="Team Lead" />
+            </span>
         </>
     ),
-    quote:
-        '“We put our effort into creating an intuitive experience for your users.”',
+    quote: (
+        <FormattedMessage defaultMessage="“We put our effort into creating an intuitive experience for your users.”" />
+    ),
     tools: (
         <>
-            <span> Jira </span>
+            <span>
+                <FormattedMessage defaultMessage="Jira" />
+            </span>
             <br />
-            <span> Project management </span>
+            <span>
+                <FormattedMessage defaultMessage="Project management" />
+            </span>
             <br />
-            <span> Google Suite </span>
+            <span>
+                <FormattedMessage defaultMessage="Google Suite" />
+            </span>
             <br />
-            <span> Figma </span>
+            <span>
+                <FormattedMessage defaultMessage="Figma" />
+            </span>
             <br />
-            <span> Github</span>
+            <span>
+                <FormattedMessage defaultMessage="Github" />
+            </span>
         </>
     ),
 };

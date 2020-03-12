@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import IconQualityAssuranceMobile from '../../Icons/Mobile/IconQualityAssuranceMobile';
 import IconQualityAssuranceDesktop from '../../Icons/Desktop/IconQualityAssuranceDesktop';
 
@@ -6,15 +7,27 @@ export const data = {
     id: 'QualityAssurance',
     iconMobile: <IconQualityAssuranceMobile />,
     iconDesktop: <IconQualityAssuranceDesktop />,
-    headline: <span>Quality Assurance</span>,
-    quote: '“We test your application to perfection!”',
+    headline: (
+        <span>
+            <FormattedMessage defaultMessage="Quality Assurance" />
+        </span>
+    ),
+    quote: (
+        <FormattedMessage defaultMessage="“We test your application to perfection!”" />
+    ),
     tools: (
         <>
-            <span> Cypress.JS </span>
+            <span>
+                <FormattedMessage defaultMessage="Cypress.JS" />
+            </span>
             <br />
-            <span> Selenium </span>
+            <span>
+                <FormattedMessage defaultMessage="Selenium" />
+            </span>
             <br />
-            <span> Browserstack.com </span>
+            <span>
+                <FormattedMessage defaultMessage="Browserstack.com" />
+            </span>
         </>
     ),
 };

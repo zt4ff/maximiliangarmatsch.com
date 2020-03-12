@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { Text } from '../../../../../components/Base/Base';
 
 export default function TextMeetTheRoles({ bottom }) {
@@ -13,7 +14,7 @@ export default function TextMeetTheRoles({ bottom }) {
             `}
             bottom={bottom}
         >
-            Meet the roles in our team!
+            <FormattedMessage defaultMessage="Meet the roles in our team!" />
         </Text>
     );
 }

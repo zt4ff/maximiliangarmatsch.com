@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import { Box, Text } from '../../../../components/Base/Base';
 import Line from '../../components/Line';
 import IconCheckpoint from '../../Icons/IconCheckpoint';
@@ -31,14 +32,16 @@ export default function FinalDesktop() {
                 textAlign="center"
             >
                 <Text as="p" color="green">
-                    That’s us.
+                    <FormattedMessage defaultMessage="That’s us." />
                 </Text>
                 <Text as="p">
-                    Now tell us about your project and we will schedule a call
-                    within 48 hours.
+                    <FormattedMessage
+                        defaultMessage="Now tell us about your project and we will schedule a call
+                    within 48 hours."
+                    />
                 </Text>
                 <Text as="p" color="green">
-                    Tell us about your project
+                    <FormattedMessage defaultMessage="Tell us about your project" />
                 </Text>
             </Box>
             <Text
@@ -53,7 +56,7 @@ export default function FinalDesktop() {
                 `}
                 to="/"
             >
-                Back to Home
+                <FormattedMessage defaultMessage="Back to Home" />
             </Text>
         </Box>
     );

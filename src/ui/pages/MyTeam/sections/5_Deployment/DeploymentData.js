@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import IconServerAdminMobile from '../../Icons/Mobile/IconServerAdminMobile';
 import IconServerAdminDesktop from '../../Icons/Desktop/IconServerAdminDesktop';
 
@@ -6,22 +7,39 @@ export const data = {
     id: 'Deployment',
     iconMobile: <IconServerAdminMobile />,
     iconDesktop: <IconServerAdminDesktop />,
-    headline: <span>Server Admin</span>,
-    quote:
-        '“We manage the physical Server on which your Data is stored and I deploy to the Apple Appstore and Google Play Store”',
+    headline: (
+        <span>
+            <FormattedMessage defaultMessage="Server Admin" />
+        </span>
+    ),
+    quote: (
+        <FormattedMessage defaultMessage="“We manage the physical Server on which your Data is stored and I deploy to the Apple Appstore and Google Play Store”" />
+    ),
     tools: (
         <>
-            <span> Ubuntu </span>
+            <span>
+                <FormattedMessage defaultMessage="Ubuntu" />
+            </span>
             <br />
-            <span> Docker </span>
+            <span>
+                <FormattedMessage defaultMessage="Docker" />
+            </span>
             <br />
-            <span> GitHub </span>
+            <span>
+                <FormattedMessage defaultMessage="GitHub" />
+            </span>
             <br />
-            <span> XCode </span>
+            <span>
+                <FormattedMessage defaultMessage="XCode" />
+            </span>
             <br />
-            <span> Android Studio </span>
+            <span>
+                <FormattedMessage defaultMessage="Android Studio" />
+            </span>
             <br />
-            <span> Bash </span>
+            <span>
+                <FormattedMessage defaultMessage="Bash" />
+            </span>
         </>
     ),
 };

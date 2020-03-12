@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import NavLinkHome from '../Navigation/NavLinkHome';
 import PortfolioIcons from '../../../components/PortfolioIcons/PortfolioIcons';
 import { Box, Flex } from '../../../components/Base/Base';
@@ -26,7 +27,9 @@ export default function FooterMobile() {
                 {location.pathname !== '/' ? (
                     <NavLinkHome />
                 ) : (
-                    <NavLink to="/impressum">Impressum</NavLink>
+                    <NavLink to="/impressum">
+                        <FormattedMessage defaultMessage="Impressum" />
+                    </NavLink>
                 )}
                 <PortfolioIcons />
             </Flex>
