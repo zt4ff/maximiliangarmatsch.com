@@ -44,7 +44,7 @@ export default function FinalDesktop() {
                     <FormattedMessage defaultMessage="Tell us about your project" />
                 </Text>
             </Box>
-            <Text
+            <Box
                 as={Link}
                 position="absolute"
                 bottom="30px"
@@ -54,10 +54,9 @@ export default function FinalDesktop() {
                     transform: translateX(-50%);
                     text-decoration: none;
                 `}
-                to="/"
             >
                 <FormattedMessage defaultMessage="Back to Home" />
-            </Text>
+            </Box>
         </Box>
     );
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Text } from '../../../components/Base/Base';
+import { Box } from '../../../components/Base/Base';
 
 export default function NavLink({ to, children, style, fontSize }) {
     return (
-        <Text
+        <Box
             as={Link}
             color="#ffffff"
             fontSize={fontSize ? fontSize : { lg: '18px', xxl: '25px' }}
@@ -15,6 +15,6 @@ export default function NavLink({ to, children, style, fontSize }) {
             style={style}
         >
             {children}
-        </Text>
+        </Box>
     );
 }

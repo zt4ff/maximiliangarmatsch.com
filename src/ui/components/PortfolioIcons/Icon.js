@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Text } from '../Base/Base';
+import { Box } from '../Base/Base';
 
 export default function Icon({ to, iconSrc, alt }) {
     return (
-        <Text
+        <Box
             as="a"
             m={{ _: '10px 20px', sm: '10px 20px', md: '0px' }}
             pb={{ md: '0px' }}
@@ -12,6 +12,6 @@ export default function Icon({ to, iconSrc, alt }) {
             href={to}
         >
             <Box as="img" width="100%" height="100%" src={iconSrc} alt={alt} />
-        </Text>
+        </Box>
     );
 }
