@@ -7,7 +7,7 @@ export default function PortfolioIcons() {
         <Flex
             flexDirection={{ sm: 'row', md: 'column' }}
             justifyContent={{ md: 'space-between' }}
-            alignItems="end"
+            alignItems="flex-end"
             position={{ sm: 'inherit', md: 'relative' }}
             height={{ sm: '100%', md: '110px', xxl: '130px' }}
             width={{ md: '84px' }}
