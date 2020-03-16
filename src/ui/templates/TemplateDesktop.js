@@ -12,8 +12,8 @@ export default function TemplateDesktop({ children }) {
 
     return (
         <Box as={Grid} container>
-            <Box as={Grid} item sm={2} />
-            <Box as={Grid} item sm={10}>
+            <Box as={Grid} item sm={1} md={2} />
+            <Box as={Grid} item sm={11} md={10}>
                 <Box as={Grid} container>
                     <HeaderDesktop />
                 </Box>
