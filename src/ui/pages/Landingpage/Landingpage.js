@@ -1,19 +1,10 @@
-import React from 'react';
-import { Flex } from '../../components/Base/Base';
-import DeviceProvider from '../../../helpers/DeviceProvider';
-import ImageMaximilian from './components/ImageMaximilian';
-import TextWelcome from './components/TextWelcome';
+import React, { useContext } from 'react';
+import { SizeContext } from '../../../context/SizeContext';
+import LandingPageMobile from './LandingPageMobile';
+import LandingPageDesktop from './LandingPageDesktop';
 
 export default function Landingpage() {
-    return (
-        <DeviceProvider>
-            <Flex
-                flexDirection={{ _: 'column', sm: 'column', md: 'row' }}
-                alignItems="center"
-            >
-                <ImageMaximilian />
-                <TextWelcome />
-            </Flex>
-        </DeviceProvider>
-    );
+    const isDesktop = useContext(SizeContext);
+
+    return <>{!isDesktop ? <LandingPageMobile /> : <LandingPageDesktop />}</>;
 }
