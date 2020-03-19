@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Box } from '../components/Base/Base';
-import HeaderMobile from './components/Header/HeaderMobile';
+import HeaderMobile from './components/Header/Mobile/HeaderMobile';
 import FooterMobile from './components/Footer/FooterMobile';
 
 export default function TemplateMobile({ children }) {

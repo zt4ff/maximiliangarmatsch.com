@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Text } from '../../../components/Base/Base';
+import { Text } from '../../../../components/Base/Base';
 
 export default function TextLogo() {
     return (

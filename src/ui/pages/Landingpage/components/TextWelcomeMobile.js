@@ -5,7 +5,13 @@ import NavLink from '../../../templates/components/Navigation/NavLink';
 
 export default function TextWelcomeMobile() {
     return (
-        <Text as="p" color="green" lineHeight="20px" textAlign="justify">
+        <Text
+            as="p"
+            color="green"
+            lineHeight="24px"
+            fontSize="20px"
+            textAlign="justify"
+        >
             <FormattedMessage defaultMessage="I am a Senior Web Engineer based in Berlin, Germany. " />
             <NavLink to="/myteam">
                 <FormattedMessage defaultMessage="My team and I" />

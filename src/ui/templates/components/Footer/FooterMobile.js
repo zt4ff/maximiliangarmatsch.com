@@ -1,14 +1,9 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
-import NavLinkHome from '../Navigation/NavLinkHome';
-import PortfolioIcons from '../../../components/PortfolioIcons/PortfolioIcons';
-import { Box, Flex } from '../../../components/Base/Base';
-import NavLink from '../Navigation/NavLink';
+import { Box, Text } from '../../../components/Base/Base';
 
 export default function FooterMobile() {
-    let location = useLocation();
-
     return (
         <Box
             as="footer"
@@ -16,23 +11,30 @@ export default function FooterMobile() {
             left="0"
             bottom="0"
             width="100%"
+            height="40px"
             bg="#191919"
+            fontSize="14px"
+            lineHeight="18px"
+            p="10px 0"
+            textAlign="center"
+            zIndex="10"
         >
-            <Flex
-                as="nav"
-                justifyContent="space-between"
-                p={{ _: '5px 40px', sm: '5px 40px', md: '20px 75px' }}
-                alignItems="center"
+            <Box
+                as={Link}
+                to="/45min"
+                css={`
+                    text-decoration: none;
+                `}
             >
-                {location.pathname !== '/' ? (
-                    <NavLinkHome />
-                ) : (
-                    <NavLink to="/impressum">
-                        <FormattedMessage defaultMessage="Impressum" />
-                    </NavLink>
-                )}
-                <PortfolioIcons />
-            </Flex>
+                <Text color="green">
+                    <FormattedMessage defaultMessage="Free 45-Minute Consultation:" />
+                    <br />
+                </Text>
+                <Text color="white">
+                    <FormattedMessage defaultMessage="maximiliangarmatsch.com/45min" />
+                    <br />
+                </Text>
+            </Box>
         </Box>
     );
 }

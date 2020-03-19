@@ -17,8 +17,9 @@ export default function IconButtonBig({ href, children }) {
                 max-width="250px"
                 height="72px"
                 css={`
-                    box-shadow: 0px 0px 16px #0cd58c;
+                    box-shadow: 0px 0px 16px #000000;
                 `}
+                bg="#222"
                 fontSize="16px"
                 lineHeight="20px"
                 borderRadius="12px"

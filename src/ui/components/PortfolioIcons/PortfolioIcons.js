@@ -13,11 +13,15 @@ export default function PortfolioIcons() {
             width={{ md: '84px' }}
         >
             <Icon
+                height={{ _: '30px', sm: '30px', md: '32px', xxl: '50px' }}
+                width={{ _: '30px', sm: '30px', md: '32px', xxl: '50px' }}
                 to="https://github.com/maximiliangarmatsch"
                 alt="GitHub"
                 iconSrc="/assets/GitHub.png"
             />
             <Icon
+                height={{ _: '30px', sm: '30px', md: '32px', xxl: '50px' }}
+                width={{ _: '30px', sm: '30px', md: '32px', xxl: '50px' }}
                 to="https://www.linkedin.com/in/maximilian-garmatsch/"
                 alt="LinkedIn"
                 iconSrc="/assets/LinkedIn.png"
