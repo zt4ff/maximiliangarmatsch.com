@@ -5,23 +5,29 @@ import Icon from './Icon';
 export default function PortfolioIcons() {
     return (
         <Flex
-            flexDirection={{ sm: 'row', md: 'column' }}
-            justifyContent={{ md: 'space-between' }}
+            flexDirection="column"
+            justifyContent="space-between"
             alignItems="flex-end"
-            position={{ sm: 'inherit', md: 'relative' }}
-            height={{ sm: '100%', md: '110px', xxl: '130px' }}
-            width={{ md: '84px' }}
+            position="absolute"
+            top="50%"
+            css={`
+                transform: translateY(-50%);
+            `}
+            right="5%"
+            zIndex="5"
+            height={{ md: '110px', xxl: '130px' }}
+            width="84px"
         >
             <Icon
-                height={{ _: '30px', sm: '30px', md: '32px', xxl: '50px' }}
-                width={{ _: '30px', sm: '30px', md: '32px', xxl: '50px' }}
+                height={{ md: '32px', xxl: '50px' }}
+                width={{ md: '32px', xxl: '50px' }}
                 to="https://github.com/maximiliangarmatsch"
                 alt="GitHub"
                 iconSrc="/assets/GitHub.png"
             />
             <Icon
-                height={{ _: '30px', sm: '30px', md: '32px', xxl: '50px' }}
-                width={{ _: '30px', sm: '30px', md: '32px', xxl: '50px' }}
+                height={{ md: '32px', xxl: '50px' }}
+                width={{ md: '32px', xxl: '50px' }}
                 to="https://www.linkedin.com/in/maximilian-garmatsch/"
                 alt="LinkedIn"
                 iconSrc="/assets/LinkedIn.png"

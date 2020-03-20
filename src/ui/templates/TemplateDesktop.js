@@ -3,8 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { useLocation } from 'react-router-dom';
 import PortfolioIcons from '../components/PortfolioIcons/PortfolioIcons';
 import { Box } from '../components/Base/Base';
-import HeaderDesktop from './components/Header/Desktop/HeaderDesktop';
-import FooterDesktop from './components/Footer/FooterDesktop';
+import HeaderMobile from './components/Header/Mobile/HeaderMobile';
 
 export default function TemplateDesktop({ children }) {
     let location = useLocation();
@@ -12,11 +11,11 @@ export default function TemplateDesktop({ children }) {
 
     return (
         <Box as={Grid} container>
+            <Box as={Grid} container mb="10rem">
+                <HeaderMobile />
+            </Box>
             <Box as={Grid} item sm={1} md={2} />
             <Box as={Grid} item sm={11} md={10}>
-                <Box as={Grid} container>
-                    <HeaderDesktop />
-                </Box>
                 <Box
                     as={Grid}
                     mt={
@@ -30,30 +29,9 @@ export default function TemplateDesktop({ children }) {
                     <Box as={Grid} item sm={10}>
                         <Box>{children}</Box>
                     </Box>
-                    <Box
-                        as={Grid}
-                        item
-                        container
-                        sm={2}
-                        justify="flex-end"
-                        alignItems="center"
-                        pr="3rem"
-                    >
+                    <Box as={Grid} item container sm={2}>
                         <PortfolioIcons />
                     </Box>
-                </Box>
-            </Box>
-            <Box
-                as={Grid}
-                item
-                container
-                justify="flex-end"
-                position="fixed"
-                bottom="3rem"
-                right="3rem"
-            >
-                <Box as={Grid} item sm={12}>
-                    <FooterDesktop />
                 </Box>
             </Box>
         </Box>

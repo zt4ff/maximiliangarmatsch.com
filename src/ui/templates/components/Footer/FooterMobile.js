@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
-import { Box, Text } from '../../../components/Base/Base';
+import { Box } from '../../../components/Base/Base';
+import LinkText45min from '../../../components/LinkText45min';
 
 export default function FooterMobile() {
     return (
@@ -19,22 +18,7 @@ export default function FooterMobile() {
             textAlign="center"
             zIndex="10"
         >
-            <Box
-                as={Link}
-                to="/45min"
-                css={`
-                    text-decoration: none;
-                `}
-            >
-                <Text color="green">
-                    <FormattedMessage defaultMessage="Free 45-Minute Consultation:" />
-                    <br />
-                </Text>
-                <Text color="white">
-                    <FormattedMessage defaultMessage="maximiliangarmatsch.com/45min" />
-                    <br />
-                </Text>
-            </Box>
+            <LinkText45min />
         </Box>
     );
 }
