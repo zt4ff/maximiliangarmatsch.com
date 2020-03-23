@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '../../../components/Base/Base';
 import LinkText45min from '../../../components/LinkText45min';
 
-export default function FooterMobile() {
+export default function Footer() {
     return (
         <Box
             as="footer"

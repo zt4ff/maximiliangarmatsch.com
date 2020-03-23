@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Box } from '../../../components/Base/Base';
+import { Box } from '../Base/Base';
 import NavLink from './NavLink';
 
 export default function NavLinkHome({ style, arrowStyle }) {

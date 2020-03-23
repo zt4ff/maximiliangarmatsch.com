@@ -1,7 +1,7 @@
 import React from 'react';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Box } from '../../components/Base/Base';
-import NavLinkHome from '../../templates/components/Navigation/NavLinkHome';
+import NavLinkHome from '../../components/Navigation/NavLinkHome';
 import theme from '../../../config/theme';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import TextAdress from './components/TextAdress';

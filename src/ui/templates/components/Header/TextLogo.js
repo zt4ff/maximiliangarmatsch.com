@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Box } from '../../../../components/Base/Base';
-import { SizeContext } from '../../../../../context/SizeContext';
+import { Box, Text } from '../../../components/Base/Base';
+import { SizeContext } from '../../../../context/SizeContext';
 
-export default function TextLogoMobile() {
+export default function TextLogo() {
     const isDesktop = useContext(SizeContext);
     return (
         <Box
@@ -14,14 +14,14 @@ export default function TextLogoMobile() {
             `}
             ml={isDesktop ? '5%' : '25px'}
         >
-            <Box
+            <Text
                 as="h1"
                 color="green"
                 fontSize={isDesktop ? '40px' : '16px'}
                 fontWeight="400"
             >
                 Maximilian Garmatsch
-            </Box>
+            </Text>
         </Box>
     );
 }

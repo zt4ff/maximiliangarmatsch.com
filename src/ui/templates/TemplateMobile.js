@@ -1,27 +1,20 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Box } from '../components/Base/Base';
-import HeaderMobile from './components/Header/Mobile/HeaderMobile';
-import FooterMobile from './components/Footer/FooterMobile';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 export default function TemplateMobile({ children }) {
     return (
         <>
-            <Box
-                as={Grid}
-                container
-                position="relative"
-                top="0"
-                left="0"
-                mb="4rem"
-            >
-                <HeaderMobile />
-            </Box>
-            <Box as={Grid} container mt={{ sm: '0rem' }}>
-                <Box width="100%">{children}</Box>
+            <Box as={Grid} container mb="4rem">
+                <Header />
             </Box>
             <Box as={Grid} container>
-                <FooterMobile />
+                {children}
+            </Box>
+            <Box as={Grid} container>
+                <Footer />
             </Box>
         </>
     );

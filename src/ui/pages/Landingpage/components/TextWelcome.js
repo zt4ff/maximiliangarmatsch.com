@@ -1,33 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Text } from '../../../components/Base/Base';
+import NavLink from '../../../components/Navigation/NavLink';
+import { SizeContext } from '../../../../context/SizeContext';
 
-function TextWelcome() {
+export default function TextWelcome() {
+    const isDesktop = useContext(SizeContext);
+
     return (
         <Text
             as="p"
             color="green"
-            fontSize={{ md: '20px', xxl: '28px' }}
-            lineHeight={{ _: '1.5rem', md: '20px', xxl: '36px' }}
-            width={{ _: '80%', sm: '75%' }}
-            m={{ sm: '15px auto', lg: '0' }}
+            lineHeight={isDesktop ? '48px' : '24px'}
+            fontSize={isDesktop ? '40px' : '20px'}
             textAlign="justify"
         >
-            <FormattedMessage
-                defaultMessage="I am a Senior Web Engineer based in Berlin, Germany. My team and I
-            develop, design, test and deploy web and mobile applications for
-            startups and businesses."
-            />
-            <br />
-            <br />
-            <FormattedMessage defaultMessage="For future collaboration contact me at:" />
-            <br />
-            <br />
-            <Text color="white">
-                <FormattedMessage defaultMessage="mail@maximiliangarmatsch.com" />
-            </Text>
+            <FormattedMessage defaultMessage="I am a Senior Web Engineer based in Berlin, Germany. " />
+            <NavLink to="/myteam" fontSize={isDesktop ? '40px' : '20px'}>
+                <FormattedMessage defaultMessage="My team and I" />
+            </NavLink>
+            <FormattedMessage defaultMessage=" develop, design, test and deploy web and mobile applications." />
         </Text>
     );
 }
-
-export default TextWelcome;

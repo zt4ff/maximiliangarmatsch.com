@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Box } from '@material-ui/core';
-import { Flex } from '../../../../components/Base/Base';
-import { SizeContext } from '../../../../../context/SizeContext';
-import LinkText45min from '../../../../components/LinkText45min';
-import TextLogoMobile from './TextLogoMobile';
+import { Flex } from '../../../components/Base/Base';
+import { SizeContext } from '../../../../context/SizeContext';
+import LinkText45min from '../../../components/LinkText45min';
+import TextLogo from './TextLogo';
 import HeaderIcons from './HeaderIcons';
 
-export default function HeaderMobile() {
+export default function Header() {
     const isDesktop = useContext(SizeContext);
     return (
         <Flex
@@ -20,7 +20,7 @@ export default function HeaderMobile() {
             position="fixed"
             zIndex="10"
         >
-            <TextLogoMobile />
+            <TextLogo />
             <Flex alignItems="center" mr={isDesktop ? '5%' : '25px'}>
                 {isDesktop && (
                     <Box fontSize="20px" lineHeight="18px" mr="70px">

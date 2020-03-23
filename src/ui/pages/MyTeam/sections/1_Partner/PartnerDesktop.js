@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { Box } from '../../../../components/Base/Base';
-import ImageMaximilian from '../../../Landingpage/components/ImageMaximilian';
+import ImageMaximilian from '../../../../components/ImageMaximilian';
 import TextPartnerInfo from './components/TextPartnerInfo';
 import TextPartnerRole from './components/TextPartnerRole';
 import TextMeetTheRoles from './components/TextMeetTheRoles';

@@ -2,7 +2,7 @@ import React from 'react';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import { Box } from '../../components/Base/Base';
 import BackgroundLayerDesktop from './components/BackgroundLayerDesktop';
-import TextWelcomeMobile from './components/TextWelcomeMobile';
+import TextWelcome from './components/TextWelcome';
 import PicthDeckButtons from './components/PitchDeckButtons';
 
 export default function LandingPageDesktop() {
@@ -19,7 +19,7 @@ export default function LandingPageDesktop() {
                     `}
                     zIndex="5"
                 >
-                    <TextWelcomeMobile />
+                    <TextWelcome />
                     <PicthDeckButtons />
                 </Box>
             </BackgroundLayerDesktop>
