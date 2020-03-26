@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Text } from '../../../components/Base/Base';
-import { SizeContext } from '../../../../context/SizeContext';
 
 export default function TextLogo() {
-    const isDesktop = useContext(SizeContext);
     return (
         <Box
             as={Link}
@@ -12,12 +10,24 @@ export default function TextLogo() {
             css={`
                 text-decoration: none;
             `}
-            ml={isDesktop ? '5%' : '25px'}
         >
             <Text
                 as="h1"
                 color="green"
-                fontSize={isDesktop ? '40px' : '16px'}
+                fontSize={{
+                    sm: '16px',
+                    md: '28px',
+                    lg: '22px',
+                    xl: '22px',
+                    xxl: '44px',
+                }}
+                lineHeight={{
+                    sm: '16px',
+                    md: '16px',
+                    lg: '44px',
+                    xl: '44px',
+                    xxl: '44px',
+                }}
                 fontWeight="400"
             >
                 Maximilian Garmatsch

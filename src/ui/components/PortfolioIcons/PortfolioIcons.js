@@ -15,19 +15,19 @@ export default function PortfolioIcons() {
             `}
             right="5%"
             zIndex="5"
-            height={{ md: '110px', xxl: '130px' }}
+            height={{ md: '90px', xxl: '130px' }}
             width="84px"
         >
             <Icon
-                height={{ md: '32px', xxl: '50px' }}
-                width={{ md: '32px', xxl: '50px' }}
+                height={{ md: '30px', xxl: '50px' }}
+                width={{ md: '30px', xxl: '50px' }}
                 to="https://github.com/maximiliangarmatsch"
                 alt="GitHub"
                 iconSrc="/assets/GitHub.png"
             />
             <Icon
-                height={{ md: '32px', xxl: '50px' }}
-                width={{ md: '32px', xxl: '50px' }}
+                height={{ md: '30px', xxl: '50px' }}
+                width={{ md: '30px', xxl: '50px' }}
                 to="https://www.linkedin.com/in/maximilian-garmatsch/"
                 alt="LinkedIn"
                 iconSrc="/assets/LinkedIn.png"

@@ -10,12 +10,12 @@ export default function LandingPageDesktop() {
         <DeviceProvider>
             <BackgroundLayerDesktop>
                 <Box
-                    maxWidth="800px"
+                    maxWidth={{ lg: '465px', xl: '465px', xxl: '800px' }}
                     position="absolute"
-                    top="50%"
-                    right="10%"
+                    top="calc(50% + 45px)"
+                    right={{ lg: '10%', xl: '10%', xxl: '10%' }}
                     css={`
-                        transform: translateY(-50%);
+                        transform: translateY(calc(-50%));
                     `}
                     zIndex="5"
                 >

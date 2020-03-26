@@ -11,7 +11,7 @@ import Impressum from './pages/Impressum/Impressum';
 import MyTeam from './pages/MyTeam/MyTeam';
 
 export default function App() {
-    let isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.md})`);
+    let isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg})`);
 
     return (
         <ErrorBoundary>
@@ -54,5 +54,6 @@ const AppStyle = createGlobalStyle`
         color: #ffffff;
         background: #222222;
         margin: 0;
+        padding: 0;
     }
 `;

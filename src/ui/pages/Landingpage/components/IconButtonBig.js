@@ -14,14 +14,11 @@ export default function IconButtonBig({ href, children }) {
             <Box
                 as="div"
                 width="100%"
-                max-width="250px"
-                height="72px"
+                minHeight="100%"
                 css={`
                     box-shadow: 0px 0px 16px #000000;
                 `}
                 bg="#222"
-                fontSize="16px"
-                lineHeight="20px"
                 borderRadius="12px"
                 display="flex"
                 justifyContent="center"

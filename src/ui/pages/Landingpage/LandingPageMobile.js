@@ -13,9 +13,14 @@ export default function LandingPageMobile() {
                     zIndex={2}
                     p="0 25px"
                     textAlign="center"
-                    position="relative"
-                    top="40%"
-                    mb="2rem"
+                    position="absolute"
+                    bottom="50px"
+                    maxWidth={{ sm: '330px', md: '500px' }}
+                    width="100%"
+                    left="50%"
+                    css={`
+                        transform: translateX(-50%);
+                    `}
                 >
                     <TextWelcome />
                     <PicthDeckButtons />

@@ -1,31 +1,33 @@
 import React, { useContext } from 'react';
-import { Box } from '@material-ui/core';
-import { Flex } from '../../../components/Base/Base';
+import { Flex, Text } from '../../../components/Base/Base';
 import { SizeContext } from '../../../../context/SizeContext';
 import LinkText45min from '../../../components/LinkText45min';
 import TextLogo from './TextLogo';
 import HeaderIcons from './HeaderIcons';
 
-export default function Header() {
+export default function Header({ p }) {
     const isDesktop = useContext(SizeContext);
     return (
         <Flex
             as="header"
-            width="100%"
-            height={isDesktop ? '100px' : '60px'}
+            height="100%"
+            maxWidth="100%"
+            p={p}
             textAlign="center"
             alignItems="center"
             justifyContent="space-between"
-            bg={{ _: 'darkgrey' }}
-            position="fixed"
-            zIndex="10"
+            bg="darkgrey"
         >
             <TextLogo />
-            <Flex alignItems="center" mr={isDesktop ? '5%' : '25px'}>
+            <Flex alignItems="center">
                 {isDesktop && (
-                    <Box fontSize="20px" lineHeight="18px" mr="70px">
+                    <Text
+                        fontSize={{ lg: '14px', xl: '14px', xxl: '20px' }}
+                        lineHeight="18px"
+                        mr={{ lg: '50px', xl: '50px', xxl: '70px' }}
+                    >
                         <LinkText45min />
-                    </Box>
+                    </Text>
                 )}
                 <HeaderIcons />
             </Flex>

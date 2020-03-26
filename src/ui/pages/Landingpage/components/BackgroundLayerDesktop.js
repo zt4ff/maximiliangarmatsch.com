@@ -11,8 +11,12 @@ export default function BackgroundLayerDesktop({ children }) {
             `}
             position="absolute"
             left="0"
-            top="100px"
-            height="calc(100% - 100px)"
+            top={{ lg: '60px', xl: '70px', xxl: '100px' }}
+            height={{
+                lg: 'calc(100% - 60px)',
+                xl: 'calc(100% - 70px)',
+                xxl: 'calc(100% - 100px)',
+            }}
             width="100%"
             zIndex={1}
         >
@@ -20,8 +24,8 @@ export default function BackgroundLayerDesktop({ children }) {
                 as="img"
                 position="absolute"
                 bottom="0"
-                left="0"
-                maxHeight="700px"
+                left={{ lg: '-50px', xl: '0px', xxl: '0px' }}
+                maxHeight={{ lg: '600px', xl: '700px', xxl: '700px' }}
                 src="/assets/MaxTransparent.png"
             />
             <ShadowLayer />

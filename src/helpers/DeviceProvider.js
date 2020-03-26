@@ -1,14 +1,13 @@
-import React from 'react';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import React, { useContext } from 'react';
 import TemplateDesktop from '../ui/templates/TemplateDesktop';
 import TemplateMobile from '../ui/templates/TemplateMobile';
-import theme from '../config/theme';
+import { SizeContext } from '../context/SizeContext';
 
 export default function DeviceProvider({ children }) {
-    const matches = useMediaQuery(`(min-width: ${theme.breakpoints.md})`);
+    const isDesktop = useContext(SizeContext);
     return (
         <>
-            {matches ? (
+            {isDesktop ? (
                 <TemplateDesktop>{children}</TemplateDesktop>
             ) : (
                 <TemplateMobile>{children}</TemplateMobile>
