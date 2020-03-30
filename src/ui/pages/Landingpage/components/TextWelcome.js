@@ -5,6 +5,7 @@ import NavLink from '../../../components/Navigation/NavLink';
 
 export default function TextWelcome() {
     const fontSizeText = {
+        _: '20px',
         sm: '20px',
         md: '30px',
         lg: '28px',
@@ -16,6 +17,7 @@ export default function TextWelcome() {
             as="p"
             color="green"
             lineHeight={{
+                _: '24px',
                 sm: '24px',
                 md: '30px',
                 lg: '25px',
@@ -24,6 +26,7 @@ export default function TextWelcome() {
             }}
             fontSize={fontSizeText}
             textAlign={{
+                _: 'left',
                 sm: 'left',
                 md: 'center',
                 lg: 'left',

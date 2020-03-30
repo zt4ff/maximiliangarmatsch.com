@@ -15,6 +15,7 @@ export default function TextLogo() {
                 as="h1"
                 color="green"
                 fontSize={{
+                    _: '16px',
                     sm: '16px',
                     md: '28px',
                     lg: '22px',
@@ -22,6 +23,7 @@ export default function TextLogo() {
                     xxl: '44px',
                 }}
                 lineHeight={{
+                    _: '16px',
                     sm: '16px',
                     md: '16px',
                     lg: '44px',

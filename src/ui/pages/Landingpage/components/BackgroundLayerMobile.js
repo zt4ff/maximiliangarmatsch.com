@@ -18,10 +18,11 @@ export default function BackgroundLayerMobile({ children }) {
         >
             <Box
                 as="img"
-                position={{ sm: 'fixed', md: 'absolute' }}
-                bottom={{ sm: '55px', md: '-40px' }}
-                left={{ sm: '-65px', md: '0' }}
-                maxWidth={{ sm: '500px', md: 'inherit' }}
+                position={{ _: 'fixed', sm: 'fixed', md: 'absolute' }}
+                bottom={{ _: '-35px', sm: '-10px', md: '-5%' }}
+                left={{ _: '-65px', sm: '-65px', md: '0' }}
+                maxWidth={{ _: '500px', sm: '500px', md: 'inherit' }}
+                width={{ md: '100vw' }}
                 src="/assets/MaxTransparentMobile.png"
             />
             <ShadowLayer />

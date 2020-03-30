@@ -3,7 +3,7 @@ import DeviceProvider from '../../../helpers/DeviceProvider';
 import { Box } from '../../components/Base/Base';
 import BackgroundLayerDesktop from './components/BackgroundLayerDesktop';
 import TextWelcome from './components/TextWelcome';
-import PicthDeckButtons from './components/PitchDeckButtons';
+import PithDeckButtons from './components/PithDeckButtons';
 
 export default function LandingPageDesktop() {
     return (
@@ -20,7 +20,7 @@ export default function LandingPageDesktop() {
                     zIndex="5"
                 >
                     <TextWelcome />
-                    <PicthDeckButtons />
+                    <PithDeckButtons />
                 </Box>
             </BackgroundLayerDesktop>
         </DeviceProvider>

@@ -22,10 +22,10 @@ export default function BackgroundLayerDesktop({ children }) {
         >
             <Box
                 as="img"
-                position="absolute"
+                position="fixed"
                 bottom="0"
-                left={{ lg: '-50px', xl: '0px', xxl: '0px' }}
-                maxHeight={{ lg: '600px', xl: '700px', xxl: '700px' }}
+                left={{ lg: '-80px', xl: '0px', xxl: '0px' }}
+                maxHeight={{ lg: '90vh', xl: '90vh', xxl: '90vh' }}
                 src="/assets/MaxTransparent.png"
             />
             <ShadowLayer />

@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { Box, Text } from './Base/Base';
 
 export default function LinkText45min() {
     return (
         <Box
-            as={Link}
-            to="/45min"
+            as="a"
+            href="https://calendly.com/maximilian-garmatsch/45min"
+            target="_blank"
             css={`
                 text-decoration: none;
             `}

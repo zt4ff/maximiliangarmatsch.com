@@ -2,7 +2,7 @@ import React from 'react';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import { Box } from '../../components/Base/Base';
 import TextWelcome from './components/TextWelcome';
-import PicthDeckButtons from './components/PitchDeckButtons';
+import PithDeckButtons from './components/PithDeckButtons';
 import BackgroundLayerMobile from './components/BackgroundLayerMobile';
 
 export default function LandingPageMobile() {
@@ -11,11 +11,13 @@ export default function LandingPageMobile() {
             <BackgroundLayerMobile>
                 <Box
                     zIndex={2}
-                    p="0 25px"
+                    p="0"
                     textAlign="center"
                     position="absolute"
-                    bottom="50px"
-                    maxWidth={{ sm: '330px', md: '500px' }}
+                    bottom="35px"
+                    minHeigth="600px"
+                    overflow="scroll"
+                    maxWidth={{ _: '330px', sm: '330px', md: '500px' }}
                     width="100%"
                     left="50%"
                     css={`
@@ -23,7 +25,7 @@ export default function LandingPageMobile() {
                     `}
                 >
                     <TextWelcome />
-                    <PicthDeckButtons />
+                    <PithDeckButtons />
                 </Box>
             </BackgroundLayerMobile>
         </DeviceProvider>

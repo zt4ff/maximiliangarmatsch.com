@@ -9,7 +9,7 @@ export default function TemplateMobile({ children }) {
         <>
             <Box as={Grid} container mb="4rem">
                 <Box width="100%" height="60px" position="fixed" zIndex="10">
-                    <Header p={{ sm: '0 30px', md: '0 60px' }} />
+                    <Header p={{ _: '0 20px', sm: '0 30px', md: '0 60px' }} />
                 </Box>
             </Box>
             <Box as={Grid} container>
