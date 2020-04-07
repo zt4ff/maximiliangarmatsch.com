@@ -9,6 +9,9 @@ import { SizeContext } from '../context/SizeContext';
 import Landingpage from './pages/Landingpage/Landingpage';
 import Impressum from './pages/Impressum/Impressum';
 import MyTeam from './pages/MyTeam/MyTeam';
+import Achievements from './pages/Achievements/Achievements';
+import ForYouIWill from './pages/ForYouIWill/ForYouIWill';
+import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
 
 export default function App() {
     let isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg})`);
@@ -33,6 +36,15 @@ export default function App() {
                                     window.location.href =
                                         'https://calendly.com/maximilian-garmatsch/45min';
                                 }}
+                            </Route>
+                            <Route path="/achievements">
+                                <Achievements />
+                            </Route>
+                            <Route path="/foryouiwill">
+                                <ForYouIWill />
+                            </Route>
+                            <Route path="/letsgetstarted">
+                                <LetsGetStarted />
                             </Route>
                         </Switch>
                     </SizeContext.Provider>

@@ -15,8 +15,8 @@ export default function TextLogo() {
                 as="h1"
                 color="green"
                 fontSize={{
-                    _: '16px',
-                    sm: '16px',
+                    _: '19px',
+                    sm: '19px',
                     md: '28px',
                     lg: '22px',
                     xl: '22px',

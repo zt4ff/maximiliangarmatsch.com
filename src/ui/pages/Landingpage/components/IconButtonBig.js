@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Box } from '../../../components/Base/Base';
 
-export default function IconButtonBig({ href, children }) {
+export default function IconButtonBig({ to, children }) {
     return (
         <Box
-            as="a"
-            href={href}
-            target="_blank"
+            as={Link}
+            to={to}
             css={`
                 text-decoration: none;
             `}
@@ -16,14 +16,16 @@ export default function IconButtonBig({ href, children }) {
                 width="100%"
                 minHeight="100%"
                 css={`
-                    box-shadow: 0px 0px 16px #000000;
+                    box-shadow: 0px 0px 6px #0cd58c;
                 `}
-                bg="#222"
+                bg="#0DE99A"
                 borderRadius="12px"
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                color="green"
+                color="#222222"
+                fontSize="18px"
+                fontWeight="500"
             >
                 {children}
             </Box>

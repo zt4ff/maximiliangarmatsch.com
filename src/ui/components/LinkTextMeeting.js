@@ -2,22 +2,25 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Box, Text } from './Base/Base';
 
-export default function LinkText45min() {
+export default function LinkTextMeeting() {
     return (
         <Box
             as="a"
-            href="https://calendly.com/maximilian-garmatsch/45min"
+            href="https://calendly.com/maximilian-garmatsch"
             target="_blank"
+            fontSize="14px"
+            lineHeight="15px"
+            fontWeight="300"
             css={`
                 text-decoration: none;
             `}
         >
             <Text color="green">
-                <FormattedMessage defaultMessage="Free 45-Minute Consultation:" />
+                <FormattedMessage defaultMessage="Schedule a meeting:" />
                 <br />
             </Text>
             <Text color="white">
-                <FormattedMessage defaultMessage="maximiliangarmatsch.com/45min" />
+                <FormattedMessage defaultMessage="https://calendly.com/maximilian-garmatsch" />
                 <br />
             </Text>
         </Box>
