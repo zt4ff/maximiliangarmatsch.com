@@ -13,7 +13,7 @@ export default {
         // light: '200',
         // regular: '200',
         // medium: '300',
-        bold: '500',
+        bold: '700',
         // bolder: '700',
     },
     colors: {

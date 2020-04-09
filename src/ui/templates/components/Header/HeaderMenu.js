@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Flex, Text } from '../../../components/Base/Base';
 import Icon from '../../../components/PortfolioIcons/Icon';
 import { SizeContext } from '../../../../context/SizeContext';
-import LinkText45min from '../../../components/LinkText45min';
+import LinkTextMeeting from '../../../components/LinkTextMeeting';
 
 export default function HeaderMenu() {
     const isDesktop = useContext(SizeContext);
@@ -15,21 +15,21 @@ export default function HeaderMenu() {
                     lineHeight="18px"
                     mr={{ lg: '50px', xl: '50px', xxl: '70px' }}
                 >
-                    <LinkText45min />
+                    <LinkTextMeeting />
                 </Text>
             )}
             <Icon
                 iconSrc={
                     isDesktop
-                        ? '/assets/IconLetterDesktop.svg'
-                        : '/assets/IconLetterMobile.svg'
+                        ? '/assets/IconLinkedInHeaderDesktop.svg'
+                        : '/assets/IconLinkedInHeaderMobile.svg'
                 }
-                alt="Icon email"
+                alt="Icon LinkedIn"
                 to="/45min"
                 target="_blank"
                 margin={{
                     _: '0 20px 0 0',
-                    sm: '0 30px 0 0',
+                    sm: '0 20px 0 0',
                     md: '0 40px 0 0',
                     lg: '0 50px 0 0',
                     xl: '0 50px 0 0',

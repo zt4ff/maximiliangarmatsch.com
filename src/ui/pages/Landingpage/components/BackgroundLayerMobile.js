@@ -19,7 +19,7 @@ export default function BackgroundLayerMobile({ children }) {
             <Box
                 as="img"
                 position={{ _: 'fixed', sm: 'fixed', md: 'absolute' }}
-                bottom={{ _: '-35px', sm: '-10px', md: '-5%' }}
+                bottom={{ _: '-35px', sm: '0px', md: '-5%' }}
                 left={{ _: '-65px', sm: '-65px', md: '0' }}
                 maxWidth={{ _: '500px', sm: '500px', md: 'inherit' }}
                 width={{ md: '100vw' }}

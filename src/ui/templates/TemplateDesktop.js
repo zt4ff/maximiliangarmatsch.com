@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import PortfolioIcons from '../components/PortfolioIcons/PortfolioIcons';
 import { Box } from '../components/Base/Base';
 import Header from './components/Header/Header';
 
@@ -24,7 +23,7 @@ export default function TemplateDesktop({ children }) {
                 <Box as={Grid} item sm={8}>
                     {children}
                 </Box>
-                <PortfolioIcons />
+                {/*<PortfolioIcons />*/}
             </Box>
         </Box>
     );
