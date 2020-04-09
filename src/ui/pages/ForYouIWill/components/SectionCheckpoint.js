@@ -10,10 +10,10 @@ export default function SectionCheckpoint({ children }) {
             `}
             borderRadius="12px"
             p="20px 16px"
-            fontSize="14px"
-            lineHeight="16px"
+            fontSize={{ _: '14px', lg: '22px' }}
+            lineHeight={{ _: '16px', lg: '22px' }}
             fontWeight="300"
-            mt="15px"
+            mt={{ _: '15px', lg: '30px' }}
         >
             {children}
         </Box>

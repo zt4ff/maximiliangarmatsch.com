@@ -1,16 +1,17 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import DeviceProvider from '../../../helpers/DeviceProvider';
 import { Box } from '../../components/Base/Base';
 import BackgroundLayerDesktop from './components/BackgroundLayerDesktop';
 import TextWelcome from './components/TextWelcome';
-import PithDeckButtons from './components/PithDeckButtons';
+import IconButtonBig from './components/IconButtonBig';
 
 export default function LandingPageDesktop() {
     return (
         <DeviceProvider>
             <BackgroundLayerDesktop>
                 <Box
-                    maxWidth={{ lg: '465px', xl: '465px', xxl: '800px' }}
+                    maxWidth={{ lg: '465px', xl: '600px', xxl: '800px' }}
                     position="absolute"
                     top="calc(50% + 45px)"
                     right={{ lg: '10%', xl: '10%', xxl: '10%' }}
@@ -20,7 +21,11 @@ export default function LandingPageDesktop() {
                     zIndex="5"
                 >
                     <TextWelcome />
-                    <PithDeckButtons />
+                    <Box height="50px" width="70%" mt="25px">
+                        <IconButtonBig to="/achievements">
+                            <FormattedMessage defaultMessage="Learn more" />
+                        </IconButtonBig>
+                    </Box>
                 </Box>
             </BackgroundLayerDesktop>
         </DeviceProvider>

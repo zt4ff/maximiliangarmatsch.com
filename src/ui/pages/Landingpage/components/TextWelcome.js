@@ -13,17 +13,17 @@ export default function TextWelcome() {
                     _: '28px',
                     sm: '28px',
                     md: '38px',
-                    lg: '32px',
-                    xl: '32px',
-                    xxl: '50px',
+                    lg: '45px',
+                    xl: '50px',
+                    xxl: '72px',
                 }}
                 fontSize={{
                     _: '28px',
                     sm: '28px',
                     md: '40px',
-                    lg: '35px',
-                    xl: '35px',
-                    xxl: '55px',
+                    lg: '42px',
+                    xl: '45px',
+                    xxl: '66px',
                 }}
                 textAlign="left"
                 m={0}
@@ -50,12 +50,13 @@ export default function TextWelcome() {
                 fontSize={{
                     _: '20px',
                     sm: '20px',
-                    md: '30px',
-                    lg: '28px',
-                    xl: '28px',
+                    md: '26px',
+                    lg: '24px',
+                    xl: '24px',
                     xxl: '40px',
                 }}
                 textAlign="left"
+                fontWeight="300"
                 m={0}
                 p={0}
             >

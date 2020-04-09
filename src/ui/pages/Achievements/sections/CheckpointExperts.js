@@ -1,39 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Text } from '../../../components/Base/Base';
 import IconCheckpoint from '../components/IconCheckpoint';
+import { FormatValuesContext } from '../../../../context/FormatValuesContext';
 
 export default function CheckpointLines() {
+    let formatValue = useContext(FormatValuesContext);
     return (
-        <IconCheckpoint size="110px">
-            <Text color="green" textAlign="center" lineHeight="14px">
+        <IconCheckpoint
+            size={{
+                _: '115px',
+                md: '115px',
+                lg: '130px',
+                xl: '150px',
+                xxl: '150px',
+            }}
+        >
+            <Text
+                color="green"
+                textAlign="center"
+                lineHeight="14px"
+                width="90px"
+            >
                 <FormattedMessage
-                    defaultMessage="<header>50+</header> <subheader>digital experts</subheader> <rest>in my network</rest>"
-                    values={{
-                        header: chunks => (
-                            <Text
-                                fontSize="18px"
-                                fontWeight="bold"
-                                lineHeight="18px"
-                            >
-                                {chunks} <br />
-                            </Text>
-                        ),
-                        subheader: chunks => (
-                            <Text
-                                fontSize="16px"
-                                fontWeight="bold"
-                                lineHeight="16px"
-                            >
-                                {chunks} <br />
-                            </Text>
-                        ),
-                        rest: chunks => (
-                            <Text fontSize="12px" fontWeight="300">
-                                {chunks} <br />
-                            </Text>
-                        ),
-                    }}
+                    defaultMessage="
+                    <header>50+</header> 
+                    <subheader>digital experts</subheader> 
+                    <rest>in my network</rest>"
+                    values={formatValue}
                 />
             </Text>
         </IconCheckpoint>

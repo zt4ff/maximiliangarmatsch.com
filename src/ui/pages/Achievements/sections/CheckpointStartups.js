@@ -1,39 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Text } from '../../../components/Base/Base';
 import IconCheckpoint from '../components/IconCheckpoint';
+import { FormatValuesContext } from '../../../../context/FormatValuesContext';
 
 export default function CheckpointStartups() {
+    let formatValue = useContext(FormatValuesContext);
     return (
-        <IconCheckpoint size="125px">
+        <IconCheckpoint
+            size={{
+                _: '125px',
+                md: '125px',
+                lg: '140px',
+                xl: '155px',
+                xxl: '155px',
+            }}
+        >
             <Text color="green" textAlign="center" lineHeight="12px">
                 <FormattedMessage
-                    defaultMessage="<header>4</header> <subheader>Startups</subheader> <rest>Co-Founded</rest>"
-                    values={{
-                        header: chunks => (
-                            <Text
-                                fontSize="22px"
-                                fontWeight="bold"
-                                lineHeight="26px"
-                            >
-                                {chunks} <br />
-                            </Text>
-                        ),
-                        subheader: chunks => (
-                            <Text
-                                fontSize="20px"
-                                fontWeight="bold"
-                                lineHeight="26px"
-                            >
-                                {chunks} <br />
-                            </Text>
-                        ),
-                        rest: chunks => (
-                            <Text fontSize="12px" fontWeight="300">
-                                {chunks} <br />
-                            </Text>
-                        ),
-                    }}
+                    defaultMessage="
+                    <header>4</header>
+                    <subheader>Startups</subheader>
+                    <rest>Co-Founded</rest>"
+                    values={formatValue}
                 />
             </Text>
         </IconCheckpoint>

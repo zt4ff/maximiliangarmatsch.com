@@ -21,7 +21,7 @@ export default function HeaderMenu() {
             <Icon
                 iconSrc={
                     isDesktop
-                        ? '/assets/IconLetterDesktop.svg'
+                        ? '/assets/IconLinkedInHeaderDesktop.svg'
                         : '/assets/IconLinkedInHeaderMobile.svg'
                 }
                 alt="Icon LinkedIn"
