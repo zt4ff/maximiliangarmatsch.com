@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box } from '../../../components/Base/Base';
+import CookieMessageDesktop from '../../../templates/components/CookieMessageDesktop';
 import ShadowLayer from './ShadowLayer';
 
 export default function BackgroundLayerDesktop({ children }) {
+    const [showCookieMessage, setShowCookieMessage] = useState(false);
+
+    useEffect(() => {
+        if (!localStorage.getItem('cookieAccept') && !showCookieMessage) {
+            setShowCookieMessage(true);
+        }
+    }, [showCookieMessage]);
+
+    const acceptCookie = () => {
+        setShowCookieMessage(false);
+        localStorage.setItem('cookieAccept', true);
+    };
+
     return (
         <Box
             css={`
@@ -27,10 +41,19 @@ export default function BackgroundLayerDesktop({ children }) {
                 left={{ lg: '-80px', xl: '0px', xxl: '0px' }}
                 maxHeight={{ lg: '90vh', xl: '90vh', xxl: '90vh' }}
                 src="/assets/MaxTransparent.png"
+                css={
+                    showCookieMessage &&
+                    `
+                    filter: blur(8px);
+                `
+                }
             />
             <ShadowLayer />
-
-            {children}
+            {showCookieMessage ? (
+                <CookieMessageDesktop acceptCookie={acceptCookie} />
+            ) : (
+                children
+            )}
         </Box>
     );
 }

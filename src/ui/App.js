@@ -31,10 +31,10 @@ export default function App() {
                             <Route path="/myteam">
                                 <MyTeam />
                             </Route>
-                            <Route path="/45min">
+                            <Route path="/intro">
                                 {() => {
                                     window.location.href =
-                                        'https://calendly.com/maximilian-garmatsch/45min';
+                                        'https://calendly.com/maximilian-garmatsch/intro';
                                 }}
                             </Route>
                             <Route path="/achievements">

@@ -66,12 +66,12 @@ export default function LetsGetStartedMobile() {
                     </Text>
                 </Flex>
                 <Box
-                    width="calc(100% - 40px)"
+                    width="calc(100% - 80px)"
                     height="50px"
                     position="absolute"
                     bottom="80px"
                 >
-                    <IconButtonBig to="/45min">
+                    <IconButtonBig to="/intro">
                         <FormattedMessage defaultMessage="Schedule a meeting now" />
                     </IconButtonBig>
                 </Box>

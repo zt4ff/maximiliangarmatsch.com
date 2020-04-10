@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box } from '../../../components/Base/Base';
+import CookieMessageMobile from '../../../templates/components/CookieMessageMobile';
 import ShadowLayer from './ShadowLayer';
 
 export default function BackgroundLayerMobile({ children }) {
+    const [showCookieMessage, setShowCookieMessage] = useState(false);
+
+    useEffect(() => {
+        if (!localStorage.getItem('cookieAccept') && !showCookieMessage) {
+            setShowCookieMessage(true);
+        }
+    }, [showCookieMessage]);
+
+    const acceptCookie = () => {
+        setShowCookieMessage(false);
+        localStorage.setItem('cookieAccept', true);
+    };
+
     return (
         <Box
             css={`
@@ -24,9 +38,19 @@ export default function BackgroundLayerMobile({ children }) {
                 maxWidth={{ _: '500px', sm: '500px', md: 'inherit' }}
                 width={{ md: '100vw' }}
                 src="/assets/MaxTransparentMobile.png"
+                css={
+                    showCookieMessage &&
+                    `
+                    filter: blur(8px);
+                `
+                }
             />
             <ShadowLayer />
-            {children}
+            {showCookieMessage ? (
+                <CookieMessageMobile acceptCookie={acceptCookie} />
+            ) : (
+                children
+            )}
         </Box>
     );
 }
