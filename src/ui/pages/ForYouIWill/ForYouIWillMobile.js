@@ -48,7 +48,7 @@ export default function ForYouIWill() {
                     <FormattedMessage
                         defaultMessage="<first>Create</first> a prototype <green>in weeks.</green> My first goal is a presentable foundation that we can build on. I’m an engineer first and an entrepreneur second.
                         {linebreak}
-                        <a> Read more about my tech-stack </a> "
+                        "
                         values={messageValues}
                     />
                 </SectionCheckpoint>
