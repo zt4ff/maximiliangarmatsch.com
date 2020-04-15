@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Box } from '../../../components/Base/Base';
 
-export default function IconButtonBig({ to, children, newTab }) {
+export default function IconButtonBig({ to, children, newTab = false }) {
     return (
         <Box
             as={Link}
             to={to}
-            target={newTab ? '_blank' : 'inherit'}
+            target={newTab ? '_blank' : '_self'}
             css={`
                 text-decoration: none;
             `}

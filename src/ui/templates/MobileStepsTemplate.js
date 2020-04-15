@@ -1,14 +1,15 @@
 import React from 'react';
 import DeviceProvider from '../../helpers/DeviceProvider';
-import { Box, Text } from '../components/Base/Base';
-import IconButtonBig from '../pages/Landingpage/components/IconButtonBig';
+import { Box } from '../components/Base/Base';
+import StepButton from './components/StepButton';
+import Title from './components/Title';
 
 export default function MobileStepsTemplate({
     children,
     title,
     to,
     ButtonText,
-    lastStep,
+    lastStep = false,
 }) {
     return (
         <DeviceProvider>
@@ -24,34 +25,13 @@ export default function MobileStepsTemplate({
                     transform: translate(-50%, -50%);
                 `}
             >
-                <Box
-                    textAlign="left"
-                    width="100%"
-                    height="40px"
-                    mt="30px"
-                    mb="20px"
-                >
-                    <Text
-                        as="h1"
-                        fontSize="28px"
-                        lineHeight="28px"
-                        color="green"
-                    >
-                        {title}
-                    </Text>
-                </Box>
+                <Title>{title}</Title>
+
                 {children}
-                <Box
-                    m="0 20px"
-                    width="calc(100% - 80px)"
-                    height="50px"
-                    position="absolute"
-                    bottom="20px"
-                >
-                    <IconButtonBig to={to} newTab={lastStep}>
-                        {ButtonText}
-                    </IconButtonBig>
-                </Box>
+
+                <StepButton lastStep={lastStep} to={to}>
+                    {ButtonText}
+                </StepButton>
             </Box>
         </DeviceProvider>
     );

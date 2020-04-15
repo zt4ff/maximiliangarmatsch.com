@@ -1,32 +1,54 @@
 import React, { useContext } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { SizeContext } from '../../../context/SizeContext';
-import { FormatValuesContext } from '../../../context/FormatValuesContext';
-import { Text } from '../../components/Base/Base';
-import AchievementsDesktop from './AchievementsDesktop';
-import AchievementsMobile from './AchievementsMobile';
+import { Box } from '../../components/Base/Base';
+import DesktopStepsTemplate from '../../templates/DesktopStepsTemplate';
+import MobileStepsTemplate from '../../templates/MobileStepsTemplate';
+import AchievementsBody from './AchievementsBody';
 
 export default function Achievements() {
     const isDesktop = useContext(SizeContext);
-    var formatValues = {
-        header: chunks => (
-            <Text fontSize="26px" fontWeight="bold" lineHeight="28px">
-                {chunks} <br />
-            </Text>
-        ),
-        subheader: chunks => (
-            <Text fontSize="18px" fontWeight="bold" lineHeight="24px">
-                {chunks} <br />
-            </Text>
-        ),
-        rest: chunks => (
-            <Text fontSize="12px" fontWeight="300">
-                {chunks} <br />
-            </Text>
-        ),
+    const templateProperty = {
+        title: <FormattedMessage defaultMessage="My Achievements" />,
+        ButtonText: <FormattedMessage defaultMessage="Learn even more" />,
+        to: '/foryouiwill',
     };
     return (
-        <FormatValuesContext.Provider value={formatValues}>
-            {isDesktop ? <AchievementsDesktop /> : <AchievementsMobile />}
-        </FormatValuesContext.Provider>
+        <>
+            {isDesktop ? (
+                <DesktopStepsTemplate {...templateProperty}>
+                    <Box
+                        position="relative"
+                        maxWidth="420px"
+                        width="100%"
+                        height="100%"
+                        maxHeight="80%"
+                        left="50%"
+                        css={`
+                            transform: translateX(-50%);
+                        `}
+                    >
+                        <AchievementsBody />
+                    </Box>
+                </DesktopStepsTemplate>
+            ) : (
+                <MobileStepsTemplate {...templateProperty}>
+                    <Box
+                        position="relative"
+                        maxWidth="400px"
+                        width="100%"
+                        height="100%"
+                        maxHeight={{ _: '80%', sm: '90%', md: '550px' }}
+                        left="50%"
+                        top={{ _: '40%', sm: '40%', md: '50%' }}
+                        css={`
+                            transform: translate(-50%, -50%);
+                        `}
+                    >
+                        <AchievementsBody />
+                    </Box>
+                </MobileStepsTemplate>
+            )}
+        </>
     );
 }

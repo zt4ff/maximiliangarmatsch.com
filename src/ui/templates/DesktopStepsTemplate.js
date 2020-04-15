@@ -2,15 +2,15 @@ import React from 'react';
 import BackgroundLayerDesktop from '../pages/Landingpage/components/BackgroundLayerDesktop';
 import { Box } from '../components/Base/Base';
 import DeviceProvider from '../../helpers/DeviceProvider';
-import Title from './components/DesktopSteps/Title';
-import StepButton from './components/DesktopSteps/StepButton';
+import Title from './components/Title';
+import StepButton from './components/StepButton';
 
 export default function DesktopStepsTemplate({
     children,
     title,
     to,
     ButtonText,
-    lastStep,
+    lastStep = false,
 }) {
     return (
         <DeviceProvider>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import { Box, Text } from '../../components/Base/Base';
+import { FormatValuesContext } from '../../../context/FormatValuesContext';
 import CheckpointYears from './sections/CheckpointYears';
 import CheckpointLines from './sections/CheckpointLines';
 import CheckpointStartups from './sections/CheckpointStartups';
@@ -8,45 +8,72 @@ import CheckpointExperts from './sections/CheckpointExperts';
 import CheckpointDevelopers from './sections/CheckpointDevelopers';
 import CheckpointProjects from './sections/CheckpointProjects';
 
+const formatValues = {
+    header: chunks => (
+        <Text fontSize="26px" fontWeight="bold" lineHeight="28px">
+            {chunks} <br />
+        </Text>
+    ),
+    subheader: chunks => (
+        <Text fontSize="18px" fontWeight="bold" lineHeight="24px">
+            {chunks} <br />
+        </Text>
+    ),
+    rest: chunks => (
+        <Text fontSize="12px" fontWeight="300">
+            {chunks} <br />
+        </Text>
+    ),
+};
+
 export default function AchievementsBody() {
     return (
-        <div>
+        <FormatValuesContext.Provider value={formatValues}>
             <Box
-                textAlign="center"
-                width="100%"
-                height="20px"
                 position="absolute"
-                top="-50px"
+                left={{ _: '10px', lg: '0%' }}
+                top={{ _: '15px', lg: '9%' }}
             >
-                <Text as="h1" fontSize="18px" lineHeight="18px" color="white">
-                    <FormattedMessage defaultMessage="My Achievements" />
-                </Text>
-            </Box>
-            <Box position="absolute" left="20px" top="15px">
                 <CheckpointYears />
             </Box>
-            <Box position="absolute" right="20px" top="15px">
+            <Box
+                position="absolute"
+                right={{ _: '20px', lg: '4%' }}
+                top={{ _: '15px', lg: '7%' }}
+            >
                 <CheckpointLines />
             </Box>
             <Box
                 position="absolute"
                 left="50%"
+                top={{ _: '100px', lg: '24%' }}
                 css={`
                     transform: translateX(-50%);
                 `}
-                top="100px"
             >
                 <CheckpointStartups />
             </Box>
-            <Box position="absolute" left="5px" bottom="210px">
+            <Box
+                position="absolute"
+                left={{ _: '-5px', lg: '-5%' }}
+                bottom={{ _: '210px', lg: '32%' }}
+            >
                 <CheckpointExperts />
             </Box>
-            <Box position="absolute" left="30%" bottom="150px">
+            <Box
+                position="absolute"
+                left={{ _: '30%', lg: '34%' }}
+                bottom={{ _: '150px', lg: '20%' }}
+            >
                 <CheckpointDevelopers />
             </Box>
-            <Box position="absolute" right="10px" bottom="180px">
+            <Box
+                position="absolute"
+                right={{ _: '10px', lg: '0%' }}
+                bottom={{ _: '180px', lg: '33%' }}
+            >
                 <CheckpointProjects />
             </Box>
-        </div>
+        </FormatValuesContext.Provider>
     );
 }
