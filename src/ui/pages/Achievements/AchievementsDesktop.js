@@ -18,7 +18,7 @@ export default function AchievementsDesktop() {
         >
             <Box
                 position="relative"
-                maxWidth="400px"
+                maxWidth="420px"
                 width="100%"
                 height="100%"
                 maxHeight="80%"
@@ -46,7 +46,7 @@ export default function AchievementsDesktop() {
                 <Box position="absolute" left="-5%" bottom="32%">
                     <CheckpointExperts />
                 </Box>
-                <Box position="absolute" left="34%" bottom="22%">
+                <Box position="absolute" left="34%" bottom="20%">
                     <CheckpointDevelopers />
                 </Box>
                 <Box position="absolute" right="-2%" bottom="35%">

@@ -48,12 +48,12 @@ export default function TextWelcome() {
                     xxl: '48px',
                 }}
                 fontSize={{
-                    _: '20px',
-                    sm: '20px',
-                    md: '26px',
-                    lg: '24px',
-                    xl: '24px',
-                    xxl: '40px',
+                    _: '18px',
+                    sm: '14px',
+                    md: '20px',
+                    lg: '22px',
+                    xl: '22px',
+                    xxl: '35px',
                 }}
                 textAlign="left"
                 fontWeight="300"

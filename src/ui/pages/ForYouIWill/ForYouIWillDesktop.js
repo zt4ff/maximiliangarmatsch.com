@@ -9,7 +9,7 @@ export default function ForYouIWillDesktop() {
         first: chunks => (
             <Text
                 color="green"
-                fontSize="26px"
+                fontSize="23px"
                 lineHeight="18px"
                 fontWeight="400"
             >

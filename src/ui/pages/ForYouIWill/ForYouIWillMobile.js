@@ -1,8 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import DeviceProvider from '../../../helpers/DeviceProvider';
-import { Box, Text } from '../../components/Base/Base';
-import IconButtonBig from '../Landingpage/components/IconButtonBig';
+import { Text } from '../../components/Base/Base';
+import MobileStepsTemplate from '../../templates/MobileStepsTemplate';
 import SectionCheckpoint from './components/SectionCheckpoint';
 
 export default function ForYouIWill() {
@@ -25,45 +24,32 @@ export default function ForYouIWill() {
             </Text>
         ),
     };
-
     return (
-        <DeviceProvider>
-            <Box p="0 20px">
-                <Text
-                    as="h1"
-                    fontWeight="bold"
-                    color="green"
-                    fontSize="28px"
-                    lineHeight="28px"
-                >
-                    <FormattedMessage defaultMessage="For you, I will..." />
-                </Text>
-                <SectionCheckpoint>
-                    <FormattedMessage
-                        defaultMessage="<first>Understand</first> your needs <green>in days.</green> My budget and time estimations will allow confident decision making."
-                        values={messageValues}
-                    />
-                </SectionCheckpoint>
-                <SectionCheckpoint>
-                    <FormattedMessage
-                        defaultMessage="<first>Create</first> a prototype <green>in weeks.</green> My first goal is a presentable foundation that we can build on. I’m an engineer first and an entrepreneur second.
+        <MobileStepsTemplate
+            title={<FormattedMessage defaultMessage="For you, I will..." />}
+            to="/letsgetstarted"
+            ButtonText={<FormattedMessage defaultMessage="Last step" />}
+        >
+            <SectionCheckpoint>
+                <FormattedMessage
+                    defaultMessage="<first>Understand</first> your needs <green>in days.</green> My budget and time estimations will allow confident decision making."
+                    values={messageValues}
+                />
+            </SectionCheckpoint>
+            <SectionCheckpoint>
+                <FormattedMessage
+                    defaultMessage="<first>Create</first> a prototype <green>in weeks.</green> My first goal is a presentable foundation that we can build on. I’m an engineer first and an entrepreneur second.
                         {linebreak}
                         "
-                        values={messageValues}
-                    />
-                </SectionCheckpoint>
-                <SectionCheckpoint>
-                    <FormattedMessage
-                        defaultMessage="<first>Manage</first> your project <green>long-term</green>. You want to continously add components or scale your product? I will lead the digital team that will do it."
-                        values={messageValues}
-                    />
-                </SectionCheckpoint>
-                <Box width="100%" height="50px" mt="15px">
-                    <IconButtonBig to="/letsgetstarted">
-                        <FormattedMessage defaultMessage="Last step" />
-                    </IconButtonBig>
-                </Box>
-            </Box>
-        </DeviceProvider>
+                    values={messageValues}
+                />
+            </SectionCheckpoint>
+            <SectionCheckpoint>
+                <FormattedMessage
+                    defaultMessage="<first>Manage</first> your project <green>long-term</green>. You want to continously add components or scale your product? I will lead the digital team that will do it."
+                    values={messageValues}
+                />
+            </SectionCheckpoint>
+        </MobileStepsTemplate>
     );
 }

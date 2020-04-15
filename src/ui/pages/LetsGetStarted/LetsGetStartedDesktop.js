@@ -14,6 +14,7 @@ export default function LetsGetStartedDesktop() {
             ButtonText={
                 <FormattedMessage defaultMessage="Schedule a meeting now" />
             }
+            lastStep={true}
         >
             <Flex alignItems="top" mb="40px">
                 <Text fontSize="48px" lineHeight="48px" mr="20px" color="green">

@@ -25,7 +25,7 @@ export default function HeaderMenu() {
                         : '/assets/IconLinkedInHeaderMobile.svg'
                 }
                 alt="Icon LinkedIn"
-                to="/45min"
+                href="https://www.linkedin.com/in/maximilian-garmatsch/"
                 target="_blank"
                 margin={{
                     _: '0 20px 0 0',

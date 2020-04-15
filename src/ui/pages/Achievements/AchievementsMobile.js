@@ -1,8 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import DeviceProvider from '../../../helpers/DeviceProvider';
-import { Box, Text } from '../../components/Base/Base';
-import IconButtonBig from '../Landingpage/components/IconButtonBig';
+import { Box } from '../../components/Base/Base';
+import MobileStepsTemplate from '../../templates/MobileStepsTemplate';
 import CheckpointYears from './sections/CheckpointYears';
 import CheckpointLines from './sections/CheckpointLines';
 import CheckpointStartups from './sections/CheckpointStartups';
@@ -12,36 +11,23 @@ import CheckpointProjects from './sections/CheckpointProjects';
 
 export default function AchievementsMobile() {
     return (
-        <DeviceProvider>
+        <MobileStepsTemplate
+            title={<FormattedMessage defaultMessage="My Achievements" />}
+            to="/foryouiwill"
+            ButtonText={<FormattedMessage defaultMessage="Learn even more" />}
+        >
             <Box
-                position="absolute"
+                position="relative"
                 maxWidth="400px"
                 width="100%"
-                height="calc(100vh - 150px)"
-                maxHeight="500px"
+                height="100%"
+                maxHeight={{ _: '80%', sm: '90%', md: '550px' }}
                 left="50%"
-                top="50%"
-                mt="30px"
+                top={{ _: '40%', sm: '40%', md: '50%' }}
                 css={`
                     transform: translate(-50%, -50%);
                 `}
             >
-                <Box
-                    textAlign="center"
-                    width="100%"
-                    height="20px"
-                    position="absolute"
-                    top="-50px"
-                >
-                    <Text
-                        as="h1"
-                        fontSize="18px"
-                        lineHeight="18px"
-                        color="white"
-                    >
-                        <FormattedMessage defaultMessage="My Achievements" />
-                    </Text>
-                </Box>
                 <Box position="absolute" left="20px" top="15px">
                     <CheckpointYears />
                 </Box>
@@ -67,18 +53,7 @@ export default function AchievementsMobile() {
                 <Box position="absolute" right="10px" bottom="180px">
                     <CheckpointProjects />
                 </Box>
-                <Box
-                    m="0 20px"
-                    width="calc(100% - 40px)"
-                    height="50px"
-                    position="absolute"
-                    bottom="40px"
-                >
-                    <IconButtonBig to="/foryouiwill">
-                        <FormattedMessage defaultMessage="Learn even more" />
-                    </IconButtonBig>
-                </Box>
             </Box>
-        </DeviceProvider>
+        </MobileStepsTemplate>
     );
 }

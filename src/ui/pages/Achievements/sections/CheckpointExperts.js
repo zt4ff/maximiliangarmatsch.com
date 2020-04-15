@@ -11,8 +11,8 @@ export default function CheckpointLines() {
             size={{
                 _: '115px',
                 md: '115px',
-                lg: '130px',
-                xl: '150px',
+                lg: '125px',
+                xl: '145px',
                 xxl: '150px',
             }}
         >

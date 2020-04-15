@@ -11,8 +11,8 @@ export default function CheckpointDevelopers() {
             size={{
                 _: '120px',
                 md: '120px',
-                lg: '135px',
-                xl: '145px',
+                lg: '130px',
+                xl: '140px',
                 xxl: '145px',
             }}
         >

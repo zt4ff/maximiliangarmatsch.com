@@ -11,7 +11,7 @@ export default function LandingPageDesktop() {
         <DeviceProvider>
             <BackgroundLayerDesktop>
                 <Box
-                    maxWidth={{ lg: '465px', xl: '600px', xxl: '800px' }}
+                    maxWidth={{ lg: '550px', xl: '650px', xxl: '800px' }}
                     position="absolute"
                     top="calc(50% + 45px)"
                     right={{ lg: '10%', xl: '10%', xxl: '10%' }}

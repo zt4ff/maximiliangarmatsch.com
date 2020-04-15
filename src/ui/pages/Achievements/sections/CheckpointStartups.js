@@ -11,8 +11,8 @@ export default function CheckpointStartups() {
             size={{
                 _: '125px',
                 md: '125px',
-                lg: '140px',
-                xl: '155px',
+                lg: '135px',
+                xl: '150px',
                 xxl: '155px',
             }}
         >

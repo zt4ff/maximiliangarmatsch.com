@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '../../../components/Base/Base';
 import IconButtonBig from '../../../pages/Landingpage/components/IconButtonBig';
 
-export default function StepButton({ to, text }) {
+export default function StepButton({ to, text, lastStep }) {
     return (
         <Box
             width="calc(100% - 80px)"
@@ -10,7 +10,9 @@ export default function StepButton({ to, text }) {
             position="absolute"
             bottom="50px"
         >
-            <IconButtonBig to={to}>{text}</IconButtonBig>
+            <IconButtonBig to={to} newTab={lastStep}>
+                {text}
+            </IconButtonBig>
         </Box>
     );
 }

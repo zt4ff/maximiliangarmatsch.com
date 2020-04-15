@@ -11,8 +11,8 @@ export default function CheckpointYears() {
             size={{
                 _: '120px',
                 md: '120px',
-                lg: '130px',
-                xl: '140px',
+                lg: '125px',
+                xl: '135px',
                 xxl: '140px',
             }}
         >
