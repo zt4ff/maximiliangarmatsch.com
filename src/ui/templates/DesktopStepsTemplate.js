@@ -18,7 +18,8 @@ export default function DesktopStepsTemplate({
                 <Box
                     maxWidth={{ lg: '500px', xl: '460px', xxl: '560px' }}
                     width="100%"
-                    height="80vh"
+                    height="90%"
+                    minHeight="650px"
                     position="absolute"
                     top="50%"
                     right={{ lg: '10%', xl: '10%', xxl: '10%' }}

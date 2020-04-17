@@ -6,8 +6,8 @@ export default function Title({ text }) {
         <Box
             width="100%"
             height={{ _: '40px', lg: '20px' }}
-            mt={{ _: '30px', lg: '40px' }}
-            mb={{ _: '20px', lg: '40px' }}
+            mt={{ _: '0px', lg: '40px' }}
+            mb={{ _: '10px', lg: '40px' }}
         >
             <Text
                 as="h1"

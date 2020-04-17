@@ -25,13 +25,11 @@ export default function MobileStepsTemplate({
                     transform: translate(-50%, -50%);
                 `}
             >
-                <Title>{title}</Title>
+                <Title text={title} />
 
                 {children}
 
-                <StepButton lastStep={lastStep} to={to}>
-                    {ButtonText}
-                </StepButton>
+                <StepButton lastStep={lastStep} to={to} text={ButtonText} />
             </Box>
         </DeviceProvider>
     );

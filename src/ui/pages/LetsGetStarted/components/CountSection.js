@@ -12,7 +12,11 @@ export default function CountSection({ number, children }) {
             >
                 {number}
             </Text>
-            <Text fontSize="20px" lineHeight="26px" fontWeight="300">
+            <Text
+                fontSize={{ _: '16px', lg: '20px' }}
+                lineHeight={{ _: '20px', lg: '26px' }}
+                fontWeight="300"
+            >
                 {children}
             </Text>
         </Flex>
