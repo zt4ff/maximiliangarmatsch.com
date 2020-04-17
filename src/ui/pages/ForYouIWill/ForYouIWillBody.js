@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Text } from '../../components/Base/Base';
+import { Box, Text } from '../../components/Base/Base';
 import SectionCheckpoint from './components/SectionCheckpoint';
 
 const messageValues = {
@@ -19,7 +19,16 @@ const messageValues = {
 };
 export default function ForYouIWillBody() {
     return (
-        <div>
+        <Box
+            maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}
+            p="10px"
+            pt="0"
+            css={`
+                @media screen and (max-width: 375px) {
+                    overflow: scroll;
+                }
+            `}
+        >
             <SectionCheckpoint>
                 <FormattedMessage
                     defaultMessage="
@@ -50,6 +59,6 @@ export default function ForYouIWillBody() {
                     values={messageValues}
                 />
             </SectionCheckpoint>
-        </div>
+        </Box>
     );
 }

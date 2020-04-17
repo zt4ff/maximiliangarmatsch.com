@@ -9,7 +9,7 @@ export default function StepButton({ to, text, lastStep }) {
             width="calc(100% - 80px)"
             height="50px"
             position="absolute"
-            bottom={{ _: '10px', lg: '50px' }}
+            bottom={{ _: '50px', lg: '50px' }}
         >
             <IconButtonBig to={to} newTab={lastStep}>
                 {text}

@@ -10,17 +10,25 @@ import CheckpointProjects from './sections/CheckpointProjects';
 
 const formatValues = {
     header: chunks => (
-        <Text fontSize="26px" fontWeight="bold" lineHeight="28px">
+        <Text
+            fontSize={{ _: '20px', sm: '20px', md: '26px' }}
+            fontWeight="bold"
+            lineHeight={{ _: '18px', sm: '18px', md: '26px' }}
+        >
             {chunks} <br />
         </Text>
     ),
     subheader: chunks => (
-        <Text fontSize="18px" fontWeight="bold" lineHeight="24px">
+        <Text
+            fontSize={{ _: '14px', sm: '16px', md: '18px' }}
+            fontWeight="bold"
+            lineHeight={{ _: '16px', sm: '16px', md: '24px' }}
+        >
             {chunks} <br />
         </Text>
     ),
     rest: chunks => (
-        <Text fontSize="12px" fontWeight="300">
+        <Text fontSize={{ _: '8px', sm: '10px', md: '12px' }} fontWeight="300">
             {chunks} <br />
         </Text>
     ),

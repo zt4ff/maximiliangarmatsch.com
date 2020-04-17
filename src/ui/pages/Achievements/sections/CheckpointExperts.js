@@ -9,8 +9,8 @@ export default function CheckpointLines() {
     return (
         <IconCheckpoint
             size={{
-                _: '115px',
-                md: '115px',
+                _: '105px',
+                md: '105px',
                 lg: '125px',
                 xl: '145px',
                 xxl: '150px',

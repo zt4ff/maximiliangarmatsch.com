@@ -37,10 +37,10 @@ export default function Achievements() {
                         position="relative"
                         maxWidth="400px"
                         width="100%"
-                        height="100%"
+                        height="90%"
                         maxHeight={{ _: '500px', sm: '500px', md: '550px' }}
                         left="50%"
-                        top={{ _: '45%', sm: '45%', md: '50%' }}
+                        top={{ _: '40%', sm: '40%', md: '50%' }}
                         css={`
                             transform: translate(-50%, -50%);
                         `}

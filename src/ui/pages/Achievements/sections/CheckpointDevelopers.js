@@ -9,8 +9,8 @@ export default function CheckpointDevelopers() {
     return (
         <IconCheckpoint
             size={{
-                _: '90px',
-                md: '90px',
+                _: '80px',
+                md: '80px',
                 lg: '105px',
                 xl: '125px',
                 xxl: '130px',

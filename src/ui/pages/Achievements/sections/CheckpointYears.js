@@ -9,8 +9,8 @@ export default function CheckpointYears() {
     return (
         <IconCheckpoint
             size={{
-                _: '120px',
-                md: '120px',
+                _: '100px',
+                md: '100px',
                 lg: '125px',
                 xl: '135px',
                 xxl: '140px',

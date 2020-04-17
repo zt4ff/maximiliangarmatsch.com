@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Text } from '../../components/Base/Base';
+import { Box, Text } from '../../components/Base/Base';
 import CountSection from './components/CountSection';
 
 const formatValues = {
@@ -31,7 +31,16 @@ const formatValues = {
 };
 export default function LetsGetStartedBody() {
     return (
-        <div>
+        <Box
+            maxHeight={{ _: 'calc(100% - 210px)', md: 'auto' }}
+            p="10px"
+            pt="0"
+            css={`
+                @media screen and (max-width: 375px) {
+                    overflow: scroll;
+                }
+            `}
+        >
             <CountSection number="1">
                 <FormattedMessage
                     defaultMessage="
@@ -62,6 +71,6 @@ export default function LetsGetStartedBody() {
                     values={formatValues}
                 />
             </CountSection>
-        </div>
+        </Box>
     );
 }
