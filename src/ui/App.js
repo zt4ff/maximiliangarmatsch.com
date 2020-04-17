@@ -46,6 +46,26 @@ export default function App() {
                             <Route path="/letsgetstarted">
                                 <LetsGetStarted />
                             </Route>
+                            <Route path="/cv">
+                                {() => {
+                                    var link = document.createElement('a');
+                                    link.href =
+                                        '/assets/CV - Maximilian Garmatsch - JavaScript Developer.pdf';
+                                    link.download =
+                                        'CV - Maximilian Garmatsch - JavaScript Developer.pdf';
+                                    link.dispatchEvent(new MouseEvent('click'));
+                                }}
+                            </Route>
+                            <Route path="/lebenslauf">
+                                {() => {
+                                    var link = document.createElement('a');
+                                    link.href =
+                                        '/assets/Lebenslauf - Maximilian Garmatsch - JavaScript Developer.pdf';
+                                    link.download =
+                                        'Lebenslauf - Maximilian Garmatsch - JavaScript Developer.pdf';
+                                    link.dispatchEvent(new MouseEvent('click'));
+                                }}
+                            </Route>
                         </Switch>
                     </SizeContext.Provider>
                     <AppStyle />
