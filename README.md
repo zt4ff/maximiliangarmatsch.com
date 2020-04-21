@@ -14,6 +14,19 @@ When a pullrequest is merged to the master branch, AWS automatically deploys to 
 How to set it up?
 Just register at AWS and follow their super simple tutorials!
 
+### 2.1 Manual Deployment
+```
+npm run build
+```
+creates "/build" folder
+make .zip file  (must include hidden files, e.g .htaccess!)
+then go to All-Inkl KAS (https://kas.all-inkl.com/) -> FTP -> /maximiliangarmatsch.com -> OPEN FTP
+delete all files
+-> upload
+-> select + check option "Unpack archives after uploading"
+-> send
+
+
 #### Working Tools / Code Quality Tools
 - Commitlint: makes sure that commit messages are formatted nicely.
 - ESLint: Formats code nicely and shows typos.

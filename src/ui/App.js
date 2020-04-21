@@ -12,10 +12,12 @@ import MyTeam from './pages/MyTeam/MyTeam';
 import Achievements from './pages/Achievements/Achievements';
 import ForYouIWill from './pages/ForYouIWill/ForYouIWill';
 import LetsGetStarted from './pages/LetsGetStarted/LetsGetStarted';
+import DownloadCV from './pages/Download/DownloadCV';
 
 export default function App() {
     let isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg})`);
 
+    console.log('### App ');
     return (
         <ErrorBoundary>
             <ThemeProvider theme={theme}>
@@ -47,24 +49,10 @@ export default function App() {
                                 <LetsGetStarted />
                             </Route>
                             <Route path="/cv">
-                                {() => {
-                                    var link = document.createElement('a');
-                                    link.href =
-                                        '/assets/CV - Maximilian Garmatsch - JavaScript Developer.pdf';
-                                    link.download =
-                                        'CV - Maximilian Garmatsch - JavaScript Developer.pdf';
-                                    link.dispatchEvent(new MouseEvent('click'));
-                                }}
+                                <DownloadCV />
                             </Route>
                             <Route path="/lebenslauf">
-                                {() => {
-                                    var link = document.createElement('a');
-                                    link.href =
-                                        '/assets/Lebenslauf - Maximilian Garmatsch - JavaScript Developer.pdf';
-                                    link.download =
-                                        'Lebenslauf - Maximilian Garmatsch - JavaScript Developer.pdf';
-                                    link.dispatchEvent(new MouseEvent('click'));
-                                }}
+                                <DownloadCV />
                             </Route>
                         </Switch>
                     </SizeContext.Provider>
