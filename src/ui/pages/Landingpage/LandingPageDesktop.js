@@ -21,9 +21,9 @@ export default function LandingPageDesktop() {
                     zIndex="5"
                 >
                     <TextWelcome />
+                    <p>TEEEST</p>
                     <Box height="50px" width="70%" mt="25px">
                         <IconButtonBig to="/achievements">
-                            <p>TEEEST</p>
                             <FormattedMessage defaultMessage="Learn more" />
                         </IconButtonBig>
                     </Box>
