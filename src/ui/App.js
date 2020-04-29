@@ -17,7 +17,6 @@ import DownloadCV from './pages/Download/DownloadCV';
 export default function App() {
     let isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.lg})`);
 
-    console.log('### App ');
     return (
         <ErrorBoundary>
             <ThemeProvider theme={theme}>
