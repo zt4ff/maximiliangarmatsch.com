@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import theme from '../../config/theme';
 import { Box, Text } from './Base/Base';
 
 export default function LinkTextMeeting() {
@@ -8,20 +9,18 @@ export default function LinkTextMeeting() {
             as="a"
             href="https://calendly.com/maximilian-garmatsch"
             target="_blank"
-            fontSize="14px"
-            lineHeight="15px"
             fontWeight="300"
             css={`
                 text-decoration: none;
             `}
         >
-            <Text color="green">
-                <FormattedMessage defaultMessage="Schedule a meeting:" />
-                <br />
-            </Text>
-            <Text color="white">
-                <FormattedMessage defaultMessage="https://calendly.com/maximilian-garmatsch" />
-                <br />
+            <Text
+                color="green"
+                border={'1px solid ' + theme.colors.green}
+                borderRadius="4px"
+                padding={{ sm: '8px', lg: '12px' }}
+            >
+                <FormattedMessage defaultMessage="Schedule a meeting" />
             </Text>
         </Box>
     );

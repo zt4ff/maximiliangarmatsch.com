@@ -11,9 +11,9 @@ export default function HeaderMenu() {
         <Flex alignItems="center">
             {isDesktop && (
                 <Text
-                    fontSize={{ lg: '14px', xl: '14px', xxl: '20px' }}
+                    fontSize={{ lg: '18px', xl: '18px', xxl: '20px' }}
                     lineHeight="18px"
-                    mr={{ lg: '50px', xl: '50px', xxl: '70px' }}
+                    mr={{ lg: '80px', xl: '110px', xxl: '150px' }}
                 >
                     <LinkTextMeeting />
                 </Text>

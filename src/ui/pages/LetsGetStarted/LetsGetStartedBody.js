@@ -15,14 +15,20 @@ const formatValues = {
     ),
     linebreak: <br />,
     a: chunks => (
-        <Text as="a" to="https://maximiliangarmatsch.com/intro" color="green">
+        <Text
+            as="a"
+            href="https://maximiliangarmatsch.com/intro"
+            target="_blank"
+            color="green"
+        >
             {chunks} <br />
         </Text>
     ),
     calendly: chunks => (
         <Text
             as="a"
-            to="https://calendly.com/maximilian-garmatsch"
+            href="https://calendly.com/maximilian-garmatsch"
+            target="_blank"
             color="green"
         >
             {chunks} <br />
@@ -54,10 +60,8 @@ export default function LetsGetStartedBody() {
                 <FormattedMessage
                     defaultMessage="
                                     <green>Pay-as-you-go consulting</green>
-                                    Super easy booking:
-                                    <calendly>calendly.com/maximilian-garmatsch</calendly>
-                                    320€ per 4 hours, including
-                                    PayPal purchase protection."
+                                    <calendly>Super easy booking</calendly>
+                                    with PayPal purchase protection."
                     values={formatValues}
                 />
             </CountSection>
@@ -66,7 +70,6 @@ export default function LetsGetStartedBody() {
                     defaultMessage="
                                     <green>Individual Projects</green>
                                     Designed to fit your budget. {linebreak}
-                                    Deployed in two-week durations.
                                     "
                     values={formatValues}
                 />
