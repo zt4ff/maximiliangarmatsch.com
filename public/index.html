@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+        .spinner-layout {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            width: 48px;
+            height: 48px;
+        }
+
+        .spinner {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 2px solid blue;
+            border-right-color: transparent;
+            animation-duration: 0.75s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-name: spinnerRotateForever;
+        }
+
+        @keyframes spinnerRotateForever {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+    </style>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,6 +44,7 @@
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"> <!--
+    
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
@@ -69,6 +102,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div class="spinner-layout">
+        <div class="spinner"></div>
+    </div>
+    <div style="text-align:center">Loading...</div>
+    <script>
+        setTimeout(() => {
+            document.body.appendChild(document.createTextNode('App is loaded!'));
+        }, 10000);
+    </script>
     <script>
       const isProduction = ('%NODE_ENV%' === 'production');
       if(isProduction && 'serviceWorker' in navigator){
