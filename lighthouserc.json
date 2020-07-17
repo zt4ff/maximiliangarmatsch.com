@@ -8,7 +8,7 @@
             "assertions": {
                 "first-contentful-paint": [
                     "error",
-                    { "maxNumericValue": 5000, "aggregationMethod": "optimistic" }
+                    { "maxNumericValue": 500000, "aggregationMethod": "optimistic" }
                 ],
                 "interactive": ["error", { "maxNumericValue": 9000, "aggregationMethod": "optimistic" }]
             }
