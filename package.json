@@ -41,7 +41,7 @@
         "extract-messages": "NODE_ENV=development babel ./src  --out-file /dev/null",
         "cypress": "cypress open",
         "workboxStart": "workbox injectManifest",
-        "prettier" : "prettier --write public/*.{html}"
+        "prettier" : "prettier --write public/index.html"
     },
     "lint-staged": {
         "*.{js, jsx, html}": [
