@@ -45,12 +45,12 @@
     },
     "lint-staged": {
         "*.{js, jsx, html}": [
-            "npm run lint:fix"
+            "npm run lint:fix && npm run prettier"
         ]
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged && npm run prettier"
+            "pre-commit": "lint-staged"
         }
     },
     "browserslist": {
