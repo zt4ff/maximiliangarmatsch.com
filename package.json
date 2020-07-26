@@ -46,7 +46,7 @@
     "lint-staged": {
         "linters": {
             "public/index.html": [
-                "prettier --write", "git add"
+                "npm run prettier"
             ]
             ,
             "*.{js, jsx }": [
