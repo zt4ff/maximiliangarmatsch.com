@@ -40,17 +40,17 @@
         "translations": "node ./translationRunner.js",
         "extract-messages": "NODE_ENV=development babel ./src  --out-file /dev/null",
         "cypress": "cypress open",
-        "workboxStart": "workbox injectManifest"
+        "workboxStart": "workbox injectManifest",
+        "prettier" : "prettier --write public/*.{html}"
     },
     "lint-staged": {
-        "*.{html}": "prettier --write",
         "*.{js, jsx, html}": [
             "npm run lint:fix"
         ]
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "lint-staged && npm run prettier"
         }
     },
     "browserslist": {
