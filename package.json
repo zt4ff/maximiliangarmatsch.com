@@ -41,18 +41,14 @@
         "extract-messages": "NODE_ENV=development babel ./src  --out-file /dev/null",
         "cypress": "cypress open",
         "workboxStart": "workbox injectManifest",
-        "prettier" : "prettier --write public/index.html"
     },
     "lint-staged": {
-        "linters": {
-            "public/index.html": [
-                "npm run prettier"
-            ]
-            ,
-            "*.{js, jsx }": [
-                "npm run lint:fix"
-            ]
-        }
+        "*.{js, jsx }": [
+            "npm run lint:fix"
+        ],
+        "*.{html}":[
+            "prettier --write", "git add"
+        ]
     },
     "husky": {
         "hooks": {
