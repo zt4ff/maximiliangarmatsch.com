@@ -44,13 +44,15 @@
         "prettier" : "prettier --write public/index.html"
     },
     "lint-staged": {
-        "public/index.html": [
-            "prettier --write", "git add"
-        ]
-        ,
-        "*.{js, jsx }": [
-            "npm run lint:fix"
-        ]
+        "linters": {
+            "public/index.html": [
+                "prettier --write", "git add"
+            ]
+            ,
+            "*.{js, jsx }": [
+                "npm run lint:fix"
+            ]
+        }
     },
     "husky": {
         "hooks": {
