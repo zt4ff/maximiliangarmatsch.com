@@ -9,7 +9,6 @@ self.addEventListener('activate', event =>
     event.waitUntil(self.clients.claim())
 );
 
-/* eslint-disable no-undef */
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 
 const bgSyncPlugin = new workbox.backgroundSync.BackgroundSyncPlugin('queue', {
