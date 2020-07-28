@@ -13,7 +13,6 @@ const authSetUp = {
     redirectUri: window.location.origin,
 };
 
-
 ReactDOM.render(
     <AuthProvider {...authSetUp}>
         <ApolloProvider client={apolloClient}>

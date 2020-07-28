@@ -40,7 +40,7 @@
         "translations": "node ./translationRunner.js",
         "extract-messages": "NODE_ENV=development babel ./src  --out-file /dev/null",
         "cypress": "cypress open",
-        "workboxStart": "workbox injectManifest",
+        "workboxStart": "workbox injectManifest"
     },
     "lint-staged": {
         "*.{js, jsx }": [
