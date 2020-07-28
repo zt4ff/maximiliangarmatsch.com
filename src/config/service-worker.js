@@ -12,7 +12,7 @@ self.addEventListener('activate', event =>
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 
 const bgSyncPlugin = new workbox.backgroundSync.BackgroundSyncPlugin('queue', {
-    maxRetentionTime: 24 * 60, // Retry for max of 24 Hours
+    maxRetentionTime: 24 * 60,
 });
 
 workbox.routing.registerRoute(
