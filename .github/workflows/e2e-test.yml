@@ -8,9 +8,15 @@ jobs:
         uses: actions/checkout@v1
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v1
+      - name: "MyCustom Node12 Server"
+        uses: actions/setup-node@v1 ## Github Action ??
         with:
-          build: npm run build
-          start: npm start 
-          wait-on: http://localhost:3000  
+          node-version: "12.x"
+
+      - name: Npm install
+        run: npm install
+        env:
+          CI: true
+
+      - name: Cypress run
+        uses: cypress-io/github-actions@v2 
