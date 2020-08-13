@@ -19,4 +19,4 @@ jobs:
           CI: true
 
       - name: Cypress run
-        uses: cypress-io/github-actions@v2 
+        uses: cypress-io/github-action@v2 
