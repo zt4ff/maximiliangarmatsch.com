@@ -27,7 +27,6 @@ jobs:
           record: true
           parallel: true
           group: "Actions"
-          ci-build-id: "${{ github.sha }}-${{ github.workflow }}-${{ github.event_name }}"
           start: npm start
 
         env:
