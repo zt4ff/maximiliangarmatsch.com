@@ -15,14 +15,11 @@ jobs:
 
       - name: Npm install
         run: npm install
-        env:
-          CI: true
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
           record: true
-          group: "Actions"
           start: npm start
 
         env:
