@@ -27,10 +27,12 @@ Just register at AWS and follow their super simple tutorials!
 ### Code coverage
 I used istanbul.js for code instrumentation and nyc to generate report. 
 To see code coverage report in cli:
-- npm start
-- npm run cypress (wait till all test suites run)
-- npm run cover:report
-- npm run cover:report:summary (to see summary of coverage)
+```
+npm start
+npm run cypress                  //(wait till all test suites run)
+npm run cover:report
+npm run cover:report:summary    //(to see summary of coverage)
+```
 
 Code coverage is also hosted with CI via Codecov and can be assessed in this [link](https://codecov.io/gh/zt4ff/maximiliangarmatsch.com)
 
