@@ -1,3 +1,5 @@
+[![MG website](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/cdbje3/master&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/cdbje3/runs)
+
 # maximiliangarmatsch.com
 www.maximiliangarmatsch.com is my main portfolio item that also uses my personal frontend-boilerplate. 
 
