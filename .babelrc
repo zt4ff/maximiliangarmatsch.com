@@ -1,6 +1,7 @@
 {
   "presets": ["react-app"],
   "plugins": [
+    "istanbul",
     "babel-plugin-styled-components",
     ["react-intl-auto", {
       "removePrefix": "src.ui.components"
