@@ -44,7 +44,9 @@
         "translations": "node ./translationRunner.js",
         "extract-messages": "NODE_ENV=development babel ./src  --out-file /dev/null",
         "cypress": "cypress open",
-        "workboxStart": "workbox injectManifest"
+        "workboxStart": "workbox injectManifest",
+        "cover:report": "nyc report --reporter=text",
+        "cover:report:summary": "nyc report --reporter=text-summary"
     },
     "lint-staged": {
         "*.{js, jsx }": [
