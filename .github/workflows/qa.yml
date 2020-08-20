@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v1
 
       - name: "MyCustom Node12 Server"
@@ -13,10 +13,10 @@ jobs:
         with:
           node-version: "12.x"
 
-      - name: Npm install
+      - name: Install Dependencies
         run: npm install
 
-      - name: Cypress run
+      - name: Run Cypress
         uses: cypress-io/github-action@v2
         with:
           record: true
@@ -25,3 +25,9 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      
+      - name: Upload code coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
