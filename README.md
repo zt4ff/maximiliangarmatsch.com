@@ -1,4 +1,4 @@
-[![MG website](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/cdbje3/master&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/cdbje3/runs)
+[![MG website](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/cdbje3/master&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/cdbje3/runs)  [![codecov](https://codecov.io/gh/zt4ff/maximiliangarmatsch.com/branch/master/graph/badge.svg)](https://codecov.io/gh/zt4ff/maximiliangarmatsch.com)
 
 # maximiliangarmatsch.com
 www.maximiliangarmatsch.com is my main portfolio item that also uses my personal frontend-boilerplate. 
@@ -15,6 +15,18 @@ npm start
 - Prettier
 - Babel
 - ....
+
+### Code coverage
+I used istanbul.js for code instrumentation and nyc to generate report. 
+To see code coverage report in cli:
+```
+npm start
+npm run cypress                  //(wait till all test suites run)
+npm run cover:report
+npm run cover:report:summary    //(to see summary of coverage)
+```
+
+Code coverage is also hosted with CI via Codecov and can be assessed in this [link](https://codecov.io/gh/zt4ff/maximiliangarmatsch.com)
 
 ### env variables
 
