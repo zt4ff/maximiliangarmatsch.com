@@ -1,4 +1,4 @@
 ignore:
- - "/src/ui/pages/MyTeam"
- - "/src/helpers/ErrorBoundary.js"
+ - "src/ui/pages/MyTeam"
+ - "src/helpers/ErrorBoundary.js"
  - "src/helpers/LocaleProvider.js"
