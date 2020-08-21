@@ -9,8 +9,7 @@ self.addEventListener('activate', event =>
     event.waitUntil(self.clients.claim())
 );
 
-console.log('### service-worker test');
-
+/* eslint-disable no-undef */
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 
 const bgSyncPlugin = new workbox.backgroundSync.BackgroundSyncPlugin('queue', {
