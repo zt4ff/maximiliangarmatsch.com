@@ -99,5 +99,10 @@
         "lint-staged": "^10.2.11",
         "prettier": "^1.19.1",
         "react-app-rewired": "^2.1.5"
+    },
+    "nyc": {
+        "exclude": [
+            "./src/ui/pages/MyTeam/MyTeam.js"
+        ]
     }
 }

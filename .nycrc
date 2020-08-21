@@ -1,3 +1,5 @@
 {
-    "extension": [".js"]
+    "exclude": [
+        "**/MyTeam/**"
+    ]
 }
